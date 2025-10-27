@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Escape The Hell Myth: Copyright</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #7f9cf5;
+            --accent-color: #f6ad55;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .copyright {
+            padding: 3rem 2rem;
+            font-size: 0.9rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .copyright h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .copyright p {
+            margin-bottom: 1rem;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding: 1rem 0;
+            border-top: 1px solid var(--secondary-color);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Print-specific styles */
+        @media print {
+            /* Page setup */
+            @page {
+                size: 8.5in 11in;
+                margin: 1in;
+            }
+            
+            /* Base styles */
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 14pt;
+                line-height: 1.6;
+                color: #000;
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* Hide navigation */
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            nav,
+            .navbar,
+            .menu,
+            .breadcrumb,
+            .pagination,
+            [class*="nav"],
+            [class*="menu"],
+            [class*="breadcrumb"] {
+                display: none !important;
+            }
+            
+            /* Preserve content styling */
+            .bible-quote {
+                font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+                font-style: italic;
+                color: #000;
+                background: #f0f4f8;
+                border-left: 4px solid #4299e1;
+                padding: 1.2rem 1.5rem;
+                margin: 1.5rem 0;
+                border-radius: 0 0.5rem 0.5rem 0;
+                page-break-inside: avoid;
+            }
+            
+            .highlight,
+            .callout {
+                page-break-inside: auto;
+                margin: 1rem 0;
+            }
+            
+            /* Keep these sections together when possible */
+            .book-section,
+            .series-section {
+                page-break-inside: avoid;
+                margin: 1rem 0;
+            }
+            
+            /* Typography */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+                color: #000;
+            }
+            
+            h1 {
+                font-size: 22pt;
+                margin-bottom: 1rem;
+            }
+            
+            h2 {
+                font-size: 18pt;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .callout-title {
+                margin-bottom: 0.5rem !important;
+                page-break-after: avoid;
+            }
+            
+            p {
+                page-break-inside: auto;
+                orphans: 2;
+                widows: 2;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Allow list items to break but keep paragraphs intact */
+            li {
+                orphans: 2;
+                widows: 2;
+            }
+            
+            /* Images */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+                display: block;
+                margin: 1rem auto;
+            }
+            
+            /* Page breaks */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+            
+            .chapter {
+                page-break-before: always;
+            }
+            
+            /* Tables */
+            table {
+                page-break-inside: auto;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+            
+            th, td {
+                border: 1px solid #000;
+                padding: 0.5rem;
+                text-align: left;
+            }
+            
+            /* Allow info-boxes (like the prophecy table box) to break */
+            .info-box {
+                page-break-inside: auto;
+            }
+            
+            /* Reduce info-box title margins */
+            .info-box-title {
+                margin-bottom: 0.75rem !important;
+                page-break-after: avoid;
+            }
+            
+                        /* Reduce margins on callout-quotes to prevent large gaps */
+            .callout-quote {
+                margin: 1rem 0 !important;
+                padding: 1rem !important;
+            }
+            
+/* Lists */
+
+            ul, ol {
+                page-break-inside: auto;
+            }
+            
+            /* Links */
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
+            }
+            
+            /* Preserve original container and layout */
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<body>
+<div class="copyright">
+<h1>Copyright</h1>
+<p>© 2025 Ansilo Boff</p>
+<p>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the author, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.</p>
+<div class="navigation-buttons">
+<a class="nav-button" href="index.html">Previous: Cover</a>
+<a class="nav-button" href="toc.html">Next: Table of Contents</a>
+</div>
+</div>
+</body>
+</body>
+</html>

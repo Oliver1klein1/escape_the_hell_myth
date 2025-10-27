@@ -1,0 +1,76 @@
+/* Calibre EPUB to PDF Conversion - Heading Size Fix */
+/* Use this as a "Look & Feel" override in Calibre */
+
+/* Reduce all heading sizes to create proper hierarchy */
+h1:not(.chapter-title) {
+    font-size: 1.4em !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.5em !important;
+}
+
+h2:not(.chapter-title) {
+    font-size: 1.2em !important;
+    margin-top: 0.8em !important;
+    margin-bottom: 0.4em !important;
+}
+
+h3 {
+    font-size: 1.1em !important;
+    margin-top: 0.6em !important;
+    margin-bottom: 0.3em !important;
+}
+
+h4 {
+    font-size: 1.05em !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.2em !important;
+}
+
+/* Ensure chapter titles remain the largest */
+.chapter-title,
+h1.chapter-title {
+    font-size: 2.2em !important;
+    text-align: center !important;
+    margin-bottom: 1.5em !important;
+}
+
+/* Override any Calibre default heading styles */
+body h1,
+body h2,
+body h3,
+body h4 {
+    font-weight: bold !important;
+    color: #2a4365 !important;
+}
+
+/* Specific fixes for problematic headings that appear too large */
+div[class*="chapter"] h1:not(.chapter-title),
+div[class*="chapter"] h2:not(.chapter-title) {
+    font-size: inherit !important;
+}
+
+/* Force smaller headings in all contexts */
+h1:not(.chapter-title):not([class*="chapter"]) {
+    font-size: 1.3em !important;
+}
+
+h2:not(.chapter-title):not([class*="chapter"]) {
+    font-size: 1.1em !important;
+}
+
+/* Additional Calibre-specific overrides */
+@page {
+    margin: 1in;
+}
+
+/* Ensure proper spacing */
+h1, h2, h3, h4 {
+    page-break-after: avoid !important;
+}
+
+/* Make sure headings don't break awkwardly */
+h1:not(.chapter-title),
+h2:not(.chapter-title) {
+    page-break-inside: avoid !important;
+}
+

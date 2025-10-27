@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Escape The Hell Myth: Chapter 1: The Invention of Eternal Fire</title>
+<style type="text/css">
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #7f9cf5;
+            --accent-color: #f6ad55;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: justify;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-top: 1.5em;
+            margin-bottom: 0.75em;
+            line-height: 1.3;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.3em;
+        }
+        
+        h3 {
+            font-size: 1.75rem;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .chapter {
+            padding: 2rem;
+        }
+        
+        .chapter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .chapter-quote {
+            font-style: italic;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            float: left;
+            font-size: 4rem;
+            padding: 0.2rem 0.5rem 0 0;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        
+        .callout {
+            background: #e6f3ff;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .callout-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .callout-quote {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-radius: 0.5rem;
+        }
+        
+        .bible-reference {
+            display: block;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-box-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .bullet-points {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .bullet-points li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .bullet-points li::before {
+            content: '•';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondary-color);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .chapter-title {
+                font-size: 2rem;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        .view-comparison-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+            width: 100%;
+        }
+        
+        .view-box {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 0;
+        }
+        
+        .view-box.materialist-view {
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .view-box.emerging-view {
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .view-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .view-title.materialist-view {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .view-title.emerging-view {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .view-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .view-item {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .view-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .view-heading {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+        
+        .view-heading.materialist-view {
+            color: var(--primary-color);
+        }
+        
+        .view-heading.emerging-view {
+            color: var(--secondary-color);
+        }
+        
+        .view-text {
+            color: var(--dark-text);
+            font-size: 0.95rem;
+            display: block;
+            text-align: left;
+        }
+        
+        @media (max-width: 768px) {
+            .view-comparison-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .materialist-box {
+            background: linear-gradient(to right bottom, #ffffff, #f8f9fa);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin: 2.5rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .materialist-box .info-box-title {
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(42, 67, 101, 0.1);
+            text-align: center;
+        }
+        
+        .materialist-box .bullet-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .materialist-box .bullet-points li {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .materialist-box .bullet-points li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .materialist-box .bullet-points li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        
+        .materialist-box .point-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .materialist-box .point-content {
+            color: #4a5568;
+            display: block;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .materialist-box {
+                padding: 1.5rem;
+                margin: 2rem 0;
+            }
+            
+            .materialist-box .info-box-title {
+                font-size: 1.3rem;
+            }
+        }
+        
+        .info-grid .info-box-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .info-grid .bullet-points {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        
+        .info-grid .bullet-points li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            text-align: left;
+        }
+        
+        .chapter-image {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 1024px) {
+            .chapter-image {
+                width: 90%;
+                max-width: 700px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .chapter-image {
+                width: 100%;
+                max-width: 600px;
+                margin: 1.5rem auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .chapter-image {
+                width: 100%;
+                max-width: none;
+                margin: 1rem auto;
+                border-radius: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="chapter">
+<h1 class="chapter-title">Chapter 1: The Invention of Eternal Fire</h1>
+<p class="chapter-quote">"If I make my bed in Sheol, behold, You are there." — Psalm 139</p>
+<p class="drop-cap">No child ever imagines eternal flames.</p>
+<p>They have to be taught to.</p>
+<p>Usually it starts with a preacher's voice and a few trembling Bible verses - "where their worm dieth not, and the fire is not quenched." Then come the pictures, the sermons, the whispered warnings about what happens to "the unsaved."</p>
+<p>Fear doesn't just creep in; it becomes <strong>holy</strong>.</p>
+<p>Parents call it love because they think it saves souls.</p>
+<p>But love never needed flames to get its message across.</p>
+<p>If you open a Hebrew scroll, long before the word hell existed, you find something quieter: <strong>SHEOL</strong>.</p>
+<p>No fire.</p>
+<p>No screaming.</p>
+<p>No pitchforks.</p>
+<p>Just the grave: the shadowy realm of the dead, the same for kings and beggars alike.</p>
+<img alt="Ancient grave" class="chapter-image" src="images/grave1.jpg"/>
+<p>Jacob said he would go down to Sheol mourning for his son. Job begged for Sheol as rest from pain. David wrote, "If I make my bed in Sheol, behold, You are there."</p>
+<div class="callout-quote">
+                "If I make my bed in Sheol, behold, You are there."
+                <span class="bible-reference">- Psalm 139:8</span>
+</div>
+<p>It was a place of silence, not torment.</p>
+<p>More hospice than furnace, offering rest and freedom from pain.</p>
+<p>The idea that God <em>burns His enemies forever</em> would have been unthinkable to the Hebrews who wrote those lines.</p>
+<h2>The Shift: From Valley to Volcano</h2>
+<p>Outside ancient Jerusalem was a valley named <strong>Ge Hinnom</strong>, or <strong>Gehenna</strong>.</p>
+<p>It had a <em>dark reputation</em>. In the days of certain kings, children had been sacrificed there [some say to Molech... others say as 'Moloch' sacrifices <strong><em>to Yahweh</em></strong>! Numerous Old Testament verses make it very clear these child sacrifices were <strong><em>to Yahweh</em></strong>! For evidence of this, check out <strong>"Liberating Humanity: How Jesus Exposed The Evil God Of Moses And Warned Of Paul"</strong>.] By Jesus' time it had become a <strong>waste dump</strong> where fires <em>smoldered</em> to consume the refuse of the city: a living <strong>metaphor for corruption and decay</strong>.</p>
+<p>So when Jesus warned religious leaders about being "in danger of <strong>Gehenna</strong>," His hearers didn't picture an <em>underworld dungeon</em>. They pictured that valley: <em>smoldering, foul, and visible</em> from their city walls.</p>
+<p>He was talking about <strong>consequences on earth</strong>: the <em>spiritual rot</em> that would eventually consume the nation if it clung to <strong>hypocrisy and violence</strong>.</p>
+<p>The fire was real, but local.</p>
+<p>Moral, not metaphysical.</p>
+<h2>How the Word "Hell" Was Born</h2>
+<p>Centuries later, translators faced a problem.</p>
+<p>Greek manuscripts used three different words: <strong>HADES</strong>, <strong>GEHENNA</strong>, and <strong>TARTARUS</strong>, each with distinct meaning. The Latin Vulgate flattened them into infernum, and the English translators followed suit with a single, convenient word: <strong>HELL</strong>.</p>
+<p>One word to <strong>rule</strong> them all.</p>
+<p>One word to <strong>terrify</strong> them all.</p>
+<p>It was efficient, and <strong>disastrous</strong>.</p>
+<p>The valley outside Jerusalem (Gehenna), the neutral grave (Sheol), and a Greek mythological prison (Hades) were suddenly merged into one eternal furnace.</p>
+<img alt="Depiction of hell" class="chapter-image" src="images/hell.jpg"/>
+<p>The misstep stuck because fear sells. It builds cathedrals faster than compassion does.</p>
+<p>These mistranslation errors and textual alterations have resulted in beliefs like the one about <strong>God versus Satan</strong>:</p>
+<div class="callout">
+<div class="callout-title">MYTH</div>
+<p><strong>Satan is more powerful than God</strong>, as Satan eventually tricks most of humanity into joining him in "Hell", leaving God to be content with a significantly smaller, fun-challenged minority.</p>
+<p>God created billions of people, but resigns Himself to settling for a small minority while watching on as a very shrewd and successful devil called Satan snatches most of His beloved creation from under His nose.</p>
+<p>Not that God doesn't make a sincere attempt to try to save everyone. He gives it His best shot, make no mistake. However, ultimately, judging by the numbers, you'd have to say that <strong>He fails</strong>.</p>
+<p>According to this myth, God is not the sharpest strategist, particularly if He can see into the future. I can picture God shrugging His shoulders and sheepishly admitting, in a tone not unlike Morgan Freeman…</p>
+<p><em>"I chose to give mankind <strong>freedom of choice</strong>, so I must live with the consequences. My enemy might have <strong>beaten me hands down</strong> on the quantity front, but I guess I got the quality ones: those wise enough and spiritually alert enough to make the right decision before they died. To be honest, I do wish more people had chosen Me. However, as I always say to Gabriel, I must respect their decisions, even if it means living with being <strong>the loser to Satan</strong> for a very long time. OK, <strong>FOREVER!</strong> I should have devised a different plan. Maybe <em>next time</em>. Oh, dear! There is <strong>no next time</strong>, is there?"</em></p>
+</div>
+<p>If we take this myth to its logical conclusion, God is either an <strong>enormous failure</strong> whose great plan for the universe wasn't so great after all. Or He has a <strong>heart of stone</strong>, choosing to go ahead and create humans while knowing that <em>most</em> won't do the right thing, either through rebellion or ignorance. He does this creating with a crystal-clear, big-screen view of the <strong><em>indescribable, endless horrors</em></strong> that will be their fate. Then He steps back, looks at what He's made, and pronounces it <strong>"good"!</strong> I don't know about you, but I'm struggling to read His facial expression at this point. Are the corners of His mouth curled <em>up</em> or <em>down</em>?</p>
+<p>This myth flows into another much-preached myth, this one about <strong>Adam versus Christ</strong>:</p>
+<div class="callout">
+<div class="callout-title">MYTH</div>
+<p><strong>Adam</strong> destroys <em>more</em> humans than <strong>Christ</strong> manages to save, making Adam <strong>more powerful</strong> than Christ.</p>
+<p>With this untruth, Adam <strong>single-handedly</strong> <em>(with a little help from Eve and a snake)</em> <strong>dooms more people</strong> to lives of misery and eventual never-ending torture than Christ <strong>manages to save</strong>. Adam is thus <strong><em>considerably more powerful and effective</em></strong> than Christ and thus God.</p>
+<p><em>Think about that for a moment.</em></p>
+<p><strong>Adam</strong> drags <strong>billions</strong> of human beings down. <strong>Christ</strong> manages to pull up only a <strong>few million</strong>, <em>if that</em>.</p>
+</div>
+<img alt="Scoreboard showing the myth" class="chapter-image" src="images/scoreboard2.jpg"/>
+<p>Of course, that's not what you'll hear in church meetings or if you talk to most Christians. They'll tell you that God is a <strong>"perfect gentleman"</strong> who's <em>so fair and just</em> that He stands back and lets each of us humans decide our own fate without being <em>so horribly rude</em> as to interfere. He exercises this <strong>amazing restraint</strong> even when He clearly sees us stumble around in <strong>spiritual darkness</strong>, completely blind, with <strong><em>computer chips inserted into our brains at birth</em></strong> that program us to obey an <strong>"evil boss"</strong>, our <strong>"sin nature."</strong> God's attitude is the following:</p>
+<p><em>"As much as I love you like you can't imagine, my deepest desire is that you make the right, wise, intelligent, sensible choice, which shows spiritual discernment, and prevent yourself from being <strong>toasted forever</strong>. If you happen to belong to a primitive tribe living in East Borneo, I <em>really hope</em> the missionaries from the Western world will get to you with the gospel in time. But if not, you'll still have <strong>no excuse</strong> because there's enough in creation that spells out the gospel message quite clearly. If you had <strong>an ounce of sense</strong>, an amazing sunset should reduce you to your knees in repentance. Admittedly, it would have been <em>easier</em> for you if you were <strong>born in the West</strong>."</em></p>
+<p>If these myths were true, it would have been much more <strong><em>cost-effective</em></strong> from a time and energy point of view if God simply <strong>set fire to most of His creation</strong> from the outset and <strong>handed the crown to Satan and Adam</strong>.</p>
+<p><strong>Scandalous? I agree!</strong></p>
+<p>If I were God, I would take <strong>legal action</strong> against <strong>99 percent</strong> of the preachers out there. This is the <strong><em>ultimate defamation</em></strong> of the <strong><em>ultimate character!</em></strong></p>
+<p>The good news is that God is <strong>incredibly patient</strong> with those who are currently making Him out to be a <strong>dim-witted, heartless, sadistic monster</strong>. He's even incredibly patient with most preachers of the <em>"good news."</em> I know that because He was (and still is) <strong>amazingly patient</strong> with <em>me</em>. I sincerely believed and preached these oddities for a significant part of my life.</p>
+<p>Up until a few years ago, I believed these myths were founded squarely on the Bible. Yet <strong>the Scriptures themselves destroy fantasies and fiction</strong>.</p>
+<h2>When Fear Became Theology</h2>
+<p>By the third century, Christianity had shifted from an <strong>underground movement of love</strong> to an <strong>imperial religion that needed control</strong>.</p>
+<p>Empires govern by <strong>threat</strong>, not <em>tenderness</em>.</p>
+<p>So when church fathers described <strong>"the eternal fire prepared for the wicked,"</strong> the image served a purpose. It made the empire's God look like a <em>stricter Caesar</em>. It also ensured that ordinary believers stayed <strong>obedient</strong> - if not to God, then at least to the <strong>clergy</strong> who claimed to represent Him.</p>
+<p>A faith born in the language of <strong>freedom</strong> had been recast in the grammar of <strong>fear</strong>.</p>
+<p>Jesus had set people <strong><em>free</em></strong> from temple taxes and sacrificial systems.</p>
+<p>Now new priests were collecting <strong><em>insurance payments</em></strong> against an afterlife inferno.</p>
+<img alt="Roman money and coins" class="chapter-image" src="images/money_roman.png"/>
+<h2>The Seduction of the Flame</h2>
+<p>It's strange how easily terror disguises itself as truth.</p>
+<p>People told themselves the doctrine of hell was righteous because it "kept people moral."</p>
+<p>But it didn't. It only made them <strong>afraid</strong> ...  afraid of questioning, afraid of dying, afraid of God Himself.</p>
+<p>When you believe God tortures forever, you stop seeing Him as <em>Father</em> and start seeing Him as <em>warden</em>.</p>
+<p>Love becomes <strong>obligation</strong>. Worship becomes <strong>negotiation</strong>. Prayer becomes <strong>panic</strong>.</p>
+<p>And yet, even here, the voice of Jesus cuts through like cool water:</p>
+<div class="callout">
+<div class="callout-title">Jesus' Counter-Narrative</div>
+<p><strong>"The Father judges no one."</strong></p>
+<p><strong>"Love your enemies."</strong></p>
+<p><strong>"I don't call down fire on those who reject me. And anyone who does is motivated by a spirit different to mine"</strong> Jesus said this after the Samaritans rejected him and would not have him enter their village. Two of Jesus' disciples wanted him to rain down fire on those Samaritans. (Luke 9:54-56)</p>
+</div>
+<p>How could the same teacher who told us to forgive seventy times seven endorse a deity who forgives once and then burns forever?</p>
+<h2>The Forgotten Fire</h2>
+<p>Jesus did speak of fire, but not as <strong>punishment</strong>.</p>
+<p>When He said, <strong>"Everyone will be salted with fire,"</strong> He meant <strong>purification</strong>, not <em>damnation</em>.</p>
+<p>When He said, <strong>"I came to bring fire on the earth,"</strong> He spoke of <strong>awakening</strong>: the blaze of divine truth that <em>consumes lies</em>.</p>
+<div class="callout-quote">
+                "I came to bring fire on the earth, and how I wish it were already kindled!"
+                <span class="bible-reference">- Luke 12:49</span>
+</div>
+<p>The fire of Jesus <strong>reveals</strong>; it doesn't <em>destroy</em>.</p>
+<p>It burns away <strong>hypocrisy</strong>, exposes <strong>greed</strong>, melts <strong>pride</strong>, and forges <strong>mercy</strong>.</p>
+<p>In His stories, fire is never the <em>weapon</em> of an <strong>offended deity</strong>.</p>
+<p>It's the warmth of <strong>transformation</strong>: the same light that turned a tax collector into a disciple, and the same light that still burns through every soul <em>brave enough to face truth</em>.</p>
+<h2>The Real Hellfire</h2>
+<p>The real hellfire wasn't <em>beneath the earth</em>.</p>
+<p>It was the <strong>fear inside believers</strong>: the <em>inherited terror</em> that made them doubt <strong>love itself</strong>.</p>
+<p>For centuries, that inner fire has done far more damage than any literal flame could.</p>
+<p>It has burned through <strong>families</strong>, <strong>pulpits</strong>, and <strong>hearts</strong>, convincing millions that safety means <em>submission</em> and that <strong>freedom</strong> is <em>dangerous</em>.</p>
+<p>But once you begin to see Jesus <em>clearly</em>, the smoke starts to <strong>clear</strong>.</p>
+<p>The fire of love and the fire of fear <strong>cannot coexist</strong>.</p>
+<p>One will always consume the other.</p>
+<p>And love ...  <em>true, self-emptying love</em> ... is the <strong>hotter flame</strong>.</p>
+<div class="callout">
+<div class="callout-title">The Truth Sets Free</div>
+<p>Hell, as eternal torture, was <strong>invented</strong>.</p>
+<p>Born from <em>mistranslation</em>, political convenience, and the human need to control through <strong>fear</strong>.</p>
+<p>Jesus' words were <em>co-opted</em>, His metaphors <strong>literalized</strong>, His Father <strong>misrepresented</strong>.</p>
+<p>The next chapters will trace how that misunderstanding hardened into <strong>dogma</strong> ... and how Jesus' own message can still <strong>set us free</strong> from it.</p>
+<p>The flames we've <em>feared</em> all our lives were never meant to scare us into heaven.</p>
+<p>They were meant to burn away the <strong>lies</strong> that kept us from seeing <strong>heaven already within</strong>.</p>
+</div>
+</div>
+</body>
+</html>

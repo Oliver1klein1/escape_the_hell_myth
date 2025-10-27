@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Appendix: Glossary of Key Terms - Escape The Hell Myth</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #7f9cf5;
+            --accent-color: #f6ad55;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #fff;
+            --callout-bg: #ebf4ff;
+        }
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: justify;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-top: 1.5em;
+            margin-bottom: 0.75em;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.3em;
+        }
+            .callout-title {
+                margin-bottom: 0.5rem !important;
+                page-break-after: avoid;
+            }
+        
+        p {
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+        
+        .term {
+            margin-bottom: 2rem;
+        }
+        
+        .term-name {
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dotted var(--secondary-color);
+            padding-bottom: 0.25rem;
+        }
+        
+        .term-definition {
+            text-align: justify;
+            margin-left: 1rem;
+        }
+        
+        .drop-cap:first-letter {
+            float: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            line-height: 0.8;
+            padding-top: 0.1rem;
+            padding-right: 0.8rem;
+            color: var(--secondary-color);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+            margin: 3rem 0;
+        }
+        
+        .letter-heading {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            padding-right: 2rem;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid var(--secondary-color);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Print-specific styles */
+        @media print {
+            /* Page setup */
+            @page {
+                size: 8.5in 11in;
+                margin: 1in;
+            }
+            
+            /* Base styles */
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 14pt;
+                line-height: 1.6;
+                color: #000;
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* Hide navigation */
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            nav,
+            .navbar,
+            .menu,
+            .breadcrumb,
+            .pagination,
+            [class*="nav"],
+            [class*="menu"],
+            [class*="breadcrumb"] {
+                display: none !important;
+            }
+            
+            /* Preserve content styling */
+            .bible-quote {
+                font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+                font-style: italic;
+                color: #000;
+                background: #f0f4f8;
+                border-left: 4px solid #4299e1;
+                padding: 1.2rem 1.5rem;
+                margin: 1.5rem 0;
+                border-radius: 0 0.5rem 0.5rem 0;
+                page-break-inside: avoid;
+            }
+            
+            .highlight,
+            .callout {
+                page-break-inside: auto;
+                margin: 1rem 0;
+            }
+            
+            /* Keep these sections together when possible */
+            .book-section,
+            .series-section {
+                page-break-inside: avoid;
+                margin: 1rem 0;
+            }
+            
+            /* Typography */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+                color: #000;
+            }
+            
+            h1 {
+                font-size: 22pt;
+                margin-bottom: 1rem;
+            }
+            
+            h2 {
+                font-size: 18pt;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .callout-title {
+                margin-bottom: 0.5rem !important;
+                page-break-after: avoid;
+            }
+            
+            p {
+                page-break-inside: auto;
+                orphans: 2;
+                widows: 2;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Allow list items to break but keep paragraphs intact */
+            li {
+                orphans: 2;
+                widows: 2;
+            }
+            
+            /* Images */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+                display: block;
+                margin: 1rem auto;
+            }
+            
+            /* Page breaks */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+            
+            .chapter {
+                page-break-before: always;
+            }
+            
+            /* Tables */
+            table {
+                page-break-inside: auto;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+            
+            th, td {
+                border: 1px solid #000;
+                padding: 0.5rem;
+                text-align: left;
+            }
+            
+            /* Allow info-boxes (like the prophecy table box) to break */
+            .info-box {
+                page-break-inside: auto;
+            }
+            
+            /* Reduce info-box title margins */
+            .info-box-title {
+                margin-bottom: 0.75rem !important;
+                page-break-after: avoid;
+            }
+            
+                        /* Reduce margins on callout-quotes to prevent large gaps */
+            .callout-quote {
+                margin: 1rem 0 !important;
+                padding: 1rem !important;
+            }
+            
+/* Lists */
+
+            ul, ol {
+                page-break-inside: auto;
+            }
+            
+            /* Links */
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
+            }
+            
+            /* Preserve original container and layout */
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<body>
+<div class="container">
+<h1>Appendix: Glossary of Key Terms</h1>
+<p class="drop-cap">This glossary provides definitions for key terms and concepts explored throughout "Escape the Hell Myth." These terms span biblical languages, theological concepts, historical events, and the authentic teachings of Jesus. Understanding these terms will help illuminate the profound truths about God's nature of love, the reality of universal reconciliation, and how mistranslations have obscured Jesus' message of hope and restoration for all creation.</p>
+<div class="divider"></div>
+<div class="letter-heading">A</div>
+<div class="term">
+<div class="term-name">Aionios (Greek)</div>
+<div class="term-definition">The Greek word commonly mistranslated as "eternal" in English Bibles. In its proper Greek usage, aionios means "age-lasting" or "pertaining to an age" rather than endless duration. When Jesus spoke of "eternal" punishment, he was actually referring to the consequences of the coming end of the Jewish age, not everlasting torment in an afterlife.</div>
+</div>
+<div class="term">
+<div class="term-name">Aion (Greek)</div>
+<div class="term-definition">The Greek word meaning "age" or "period of time." Jesus frequently used this term when speaking of "the end of the age," referring specifically to the end of the Jewish age marked by the destruction of the temple in AD 70, not the end of the world.</div>
+</div>
+<div class="letter-heading">E</div>
+<div class="term">
+<div class="term-name">Eternal Punishment</div>
+<div class="term-definition">A theological concept built on mistranslations of the Greek aionios and Hebrew olam, both meaning "age-lasting" rather than "eternal." The doctrine of eternal punishment contradicts Jesus' revelation of God as love and the biblical hope of universal reconciliation.</div>
+</div>
+<div class="letter-heading">F</div>
+<div class="term">
+<div class="term-name">Father</div>
+<div class="term-definition">The term Jesus used exclusively to refer to God, replacing the fear-based relationship with Yahweh. The Father Jesus revealed is characterized by unconditional love, mercy, and restoration rather than violence, judgment, or eternal punishment.</div>
+</div>
+<div class="letter-heading">G</div>
+<div class="term">
+<div class="term-name">Gehenna</div>
+<div class="term-definition">A real valley outside Jerusalem (Ge Hinnom) that served as a smoldering waste dump in Jesus' time. When Jesus warned about being "in danger of Gehenna," he was referring to the consequences of spiritual corruption and national judgment, not an eternal place of torment. The fires were literal but local—visible from the city walls.</div>
+</div>
+<div class="term">
+<div class="term-name">Ge Hinnom</div>
+<div class="term-definition">The Hebrew name for the valley outside Jerusalem that became associated with child sacrifice in biblical times and later served as a refuse dump. This literal geographical location is the source of the word Gehenna, which Jesus used as a metaphor for the consequences of rejecting divine love and embracing violence.</div>
+</div>
+<div class="letter-heading">H</div>
+<div class="term">
+<div class="term-name">Hades (Greek)</div>
+<div class="term-definition">In Greek mythology, the realm of the dead named after the god Hades. In the New Testament, Hades is simply the Greek equivalent of the Hebrew Sheol, meaning the grave or place of the dead. It was not understood as a place of eternal torment but as a neutral state of death.</div>
+</div>
+<div class="term">
+<div class="term-name">Hell (English)</div>
+<div class="term-definition">An English word created by translators that conflated three distinct biblical concepts: Sheol (the grave), Hades (Greek equivalent of the grave), and Gehenna (the valley outside Jerusalem). This single word created confusion and led to the false doctrine of eternal punishment.</div>
+</div>
+<div class="letter-heading">J</div>
+<div class="term">
+<div class="term-name">Jewish Age</div>
+<div class="term-definition">The historical period marked by the Aaronic priesthood, temple sacrifices, and genealogical records that ended dramatically in AD 70 with the Roman destruction of Jerusalem and the temple. When Jesus spoke of "the end of the age," he was specifically referring to this period's conclusion, not the end of the world.</div>
+</div>
+<div class="term">
+<div class="term-name">Judgment (Krisis)</div>
+<div class="term-definition">A mistranslation issue where the Greek word krisis (meaning "judgment" or "decision") was sometimes rendered as "damnation." This error contributed to the false doctrine of eternal punishment, when Jesus was actually referring to God's just decision-making and evaluation, not eternal torment.</div>
+</div>
+<div class="letter-heading">O</div>
+<div class="term">
+<div class="term-name">Olam (Hebrew)</div>
+<div class="term-definition">The Hebrew equivalent of the Greek aion, meaning "age" or "period of time" rather than "eternal." Like aionios, this word was frequently mistranslated as "everlasting" or "eternal" when the biblical authors were actually referring to age-long durations, not endless time.</div>
+</div>
+<div class="letter-heading">S</div>
+<div class="term">
+<div class="term-name">Sheol (Hebrew)</div>
+<div class="term-definition">The Hebrew word for the grave or place of the dead, understood as a neutral state of rest and silence rather than a place of torment. Biblical descriptions show Sheol as a place where God's presence is still acknowledged and where there is rest from earthly pain and suffering.</div>
+</div>
+<div class="letter-heading">T</div>
+<div class="term">
+<div class="term-name">Tartarus (Greek)</div>
+<div class="term-definition">In Greek mythology, a deep abyss used as a dungeon of torment. The word appears only once in the New Testament (2 Peter 2:4), referring to the confinement of fallen angels, but this mythological reference was later conflated with other terms to create the concept of eternal human punishment.</div>
+</div>
+<div class="letter-heading">U</div>
+<div class="term">
+<div class="term-name">Universal Reconciliation</div>
+<div class="term-definition">The theological doctrine that all creation will eventually be restored to God through divine love and mercy, supported by numerous biblical passages that speak of God's ultimate plan to "reconcile all things" (Colossians 1:20) and be "all in all" (1 Corinthians 15:28).</div>
+</div>
+<div class="letter-heading">Y</div>
+<div class="term">
+<div class="term-name">Yahweh</div>
+<div class="term-definition">The name of God in the Old Testament, often translated as "LORD" in English Bibles. Jesus exposed the problematic characteristics attributed to Yahweh (violence, favoritism, eternal punishment) and revealed instead a loving Father whose nature is fundamentally different from the god of retribution and fear.</div>
+</div>
+<div class="navigation-buttons">
+<a class="nav-button" href="other-books.html">Previous: Books</a>
+<a class="nav-button" href="bibliography.html">Next: Bibliography</a>
+</div>
+</div>
+</body>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Escape The Hell Myth: Part 3 - Clearing Up The "Hell" Texts</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #7f9cf5;
+            --accent-color: #f6ad55;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+        }
+        
+        .part-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+            margin: 0;
+            opacity: 0.8;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 1rem 0 3rem;
+            font-weight: 400;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondary-color);
+            width: 100%;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .part-number {
+                font-size: 6rem;
+            }
+            
+            .subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Print-specific styles */
+        @media print {
+            /* Page setup */
+            @page {
+                size: 8.5in 11in;
+                margin: 1in;
+            }
+            
+            /* Base styles */
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 14pt;
+                line-height: 1.6;
+                color: #000;
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* Hide navigation */
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            nav,
+            .navbar,
+            .menu,
+            .breadcrumb,
+            .pagination,
+            [class*="nav"],
+            [class*="menu"],
+            [class*="breadcrumb"] {
+                display: none !important;
+            }
+            
+            /* Preserve content styling */
+            .bible-quote {
+                font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+                font-style: italic;
+                color: #000;
+                background: #f0f4f8;
+                border-left: 4px solid #4299e1;
+                padding: 1.2rem 1.5rem;
+                margin: 1.5rem 0;
+                border-radius: 0 0.5rem 0.5rem 0;
+                page-break-inside: avoid;
+            }
+            
+            .highlight,
+            .callout {
+                page-break-inside: auto;
+                margin: 1rem 0;
+            }
+            
+            /* Keep these sections together when possible */
+            .book-section,
+            .series-section {
+                page-break-inside: avoid;
+                margin: 1rem 0;
+            }
+            
+            /* Typography */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+                color: #000;
+            }
+            
+            h1 {
+                font-size: 22pt;
+                margin-bottom: 1rem;
+            }
+            
+            h2 {
+                font-size: 18pt;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .callout-title {
+                margin-bottom: 0.5rem !important;
+                page-break-after: avoid;
+            }
+            
+            p {
+                page-break-inside: auto;
+                orphans: 2;
+                widows: 2;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Allow list items to break but keep paragraphs intact */
+            li {
+                orphans: 2;
+                widows: 2;
+            }
+            
+            /* Images */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+                display: block;
+                margin: 1rem auto;
+            }
+            
+            /* Page breaks */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+            
+            .chapter {
+                page-break-before: always;
+            }
+            
+            /* Tables */
+            table {
+                page-break-inside: auto;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+            
+            th, td {
+                border: 1px solid #000;
+                padding: 0.5rem;
+                text-align: left;
+            }
+            
+            /* Allow info-boxes (like the prophecy table box) to break */
+            .info-box {
+                page-break-inside: auto;
+            }
+            
+            /* Reduce info-box title margins */
+            .info-box-title {
+                margin-bottom: 0.75rem !important;
+                page-break-after: avoid;
+            }
+            
+                        /* Reduce margins on callout-quotes to prevent large gaps */
+            .callout-quote {
+                margin: 1rem 0 !important;
+                padding: 1rem !important;
+            }
+            
+/* Lists */
+
+            ul, ol {
+                page-break-inside: auto;
+            }
+            
+            /* Links */
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
+            }
+            
+            /* Preserve original container and layout */
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<body>
+<div class="container">
+<h1 class="part-number">Part 3</h1>
+<h2 class="subtitle">Clearing Up The "Hell" Texts</h2>
+<div class="navigation-buttons">
+<a class="nav-button" href="chapter3.html">Previous: Chapter 3</a>
+<a class="nav-button" href="chapter4.html">Next: Chapter 4</a>
+</div>
+</div>
+</body>
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿"Type","Description"
+"Error","E24010: Hyperlink not resolved in toc (One possible reason can be that the link points to a tag with style display:none):C:\Users\Michael\AppData\Local\Temp\e0dd7581-1335-40f8-a6b8-b5d74530f590\cTemp\mTemp\mbp_7E9_A_1A_16_12_27_3C2_74E4_68A8_1\OEBPS\copyright.xhtml#","","","",""
+"Error","E24001: The table of content could not be built.","","","",""
+"Notice","W14010: media file not found  C:\Users\Michael\AppData\Local\Temp\e0dd7581-1335-40f8-a6b8-b5d74530f590\cTemp\mTemp\mbp_7E9_A_1A_16_12_27_3C2_74E4_68A8_1\OEBPS\Images\Escape-the-hell-myth-cover-final.jpg","","","",""
+"Notice","W14001: Hyperlink not resolved:  C:\Users\Michael\AppData\Local\Temp\e0dd7581-1335-40f8-a6b8-b5d74530f590\cTemp\mTemp\mbp_7E9_A_1A_16_12_27_3C2_74E4_68A8_1\OEBPS\Text\other-books.html","","","",""
+"Notice","W14002: Some hyperlinks could not be resolved.","","","",""
+"Status","Book conversion failed."

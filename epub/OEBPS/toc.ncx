@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:550e8400-e29b-41d4-a716-446655440000"/>
+    <meta name="dtb:depth" content="1"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>Escape The Hell Myth: Rediscover The Teachings Of Jesus On Love</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="cover" playOrder="1">
+      <navLabel>
+        <text>Cover</text>
+      </navLabel>
+      <content src="cover.xhtml"/>
+    </navPoint>
+    <navPoint id="copyright" playOrder="2">
+      <navLabel>
+        <text>Copyright</text>
+      </navLabel>
+      <content src="Text/copyright.xhtml"/>
+    </navPoint>
+    <navPoint id="introduction" playOrder="3">
+      <navLabel>
+        <text>Introduction: Hell Hath No Fury?</text>
+      </navLabel>
+      <content src="Text/introduction.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter1" playOrder="4">
+      <navLabel>
+        <text>Chapter 1: The Invention of Eternal Fire</text>
+      </navLabel>
+      <content src="Text/chapter1.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter2" playOrder="5">
+      <navLabel>
+        <text>Chapter 2: The Psychological Power of Hell Doctrine</text>
+      </navLabel>
+      <content src="Text/chapter2.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter3" playOrder="6">
+      <navLabel>
+        <text>Chapter 3: Paul vs Jesus: The Great Theological Divide</text>
+      </navLabel>
+      <content src="Text/chapter3.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter4" playOrder="7">
+      <navLabel>
+        <text>Chapter 4: Yahweh vs The Father: Two Different Gods</text>
+      </navLabel>
+      <content src="Text/chapter4.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter5" playOrder="8">
+      <navLabel>
+        <text>Chapter 5: The Universal Reconciliation of Jesus</text>
+      </navLabel>
+      <content src="Text/chapter5.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter6" playOrder="9">
+      <navLabel>
+        <text>Chapter 6: Fear vs Love: The Core Message</text>
+      </navLabel>
+      <content src="Text/chapter6.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter7" playOrder="10">
+      <navLabel>
+        <text>Chapter 7: Biblical Inerrancy: A Dangerous Doctrine</text>
+      </navLabel>
+      <content src="Text/chapter7.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter8" playOrder="11">
+      <navLabel>
+        <text>Chapter 8: Spiritual Liberation: Breaking Free from Hell</text>
+      </navLabel>
+      <content src="Text/chapter8.xhtml"/>
+    </navPoint>
+    <navPoint id="conclusion" playOrder="12">
+      <navLabel>
+        <text>Conclusion: The Path Forward</text>
+      </navLabel>
+      <content src="Text/conclusion.xhtml"/>
+    </navPoint>
+    <navPoint id="other-books" playOrder="13">
+      <navLabel>
+        <text>Other Books by Ansilo Boff</text>
+      </navLabel>
+      <content src="Text/other-books.xhtml"/>
+    </navPoint>
+    <navPoint id="appendix" playOrder="14">
+      <navLabel>
+        <text>Appendix</text>
+      </navLabel>
+      <content src="Text/appendix.xhtml"/>
+    </navPoint>
+    <navPoint id="bibliography" playOrder="15">
+      <navLabel>
+        <text>Bibliography</text>
+      </navLabel>
+      <content src="Text/bibliography.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

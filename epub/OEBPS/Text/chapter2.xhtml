@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Escape The Hell Myth: Chapter 2: Jesus vs. the Punishing God</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css"/>
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #7f9cf5;
+            --accent-color: #f6ad55;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            background-color: var(--light-bg);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: justify;
+        }
+        
+        p {
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .chapter {
+            padding: 2rem;
+        }
+        
+        .chapter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .chapter-quote {
+            font-style: italic;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            float: left;
+            font-size: 4rem;
+            padding: 0.2rem 0.5rem 0 0;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        
+        .callout {
+            background: #e6f3ff;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .callout-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .callout-quote {
+            background-color: #f0f1f7;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-radius: 0.5rem;
+        }
+        
+        .bible-reference {
+            display: block;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-box-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .bullet-points {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .bullet-points li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .bullet-points li::before {
+            content: '•';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .bullet-points li.no-bullet::before {
+            content: none;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            margin: 2rem 0;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            border: 1px solid rgba(127, 156, 245, 0.2);
+        }
+        
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-weight: normal;
+        }
+        
+        .comparison-table td {
+            vertical-align: top;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--secondary-color);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .chapter-title {
+                font-size: 2rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem;
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        .chapter-image {
+            width: 60%;
+            max-width: 800px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 1024px) {
+            .chapter-image {
+                width: 90%;
+                max-width: 700px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .chapter-image {
+                width: 100%;
+                max-width: 600px;
+                margin: 1.5rem auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .chapter-image {
+                width: 100%;
+                max-width: none;
+                margin: 1rem auto;
+                border-radius: 4px;
+            }
+        }
+        
+        /* Add these styles for the table headings */
+        .quantum-table th {
+            font-size: 1.4rem;
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .quantum-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+
+        .quantum-table td {
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            /* Page setup */
+            @page {
+                size: 8.5in 11in;
+                margin: 1in;
+            }
+            
+            /* Base styles */
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 14pt;
+                line-height: 1.6;
+                color: #000;
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* Hide navigation */
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            nav,
+            .navbar,
+            .menu,
+            .breadcrumb,
+            .pagination,
+            [class*="nav"],
+            [class*="menu"],
+            [class*="breadcrumb"] {
+                display: none !important;
+            }
+            
+            /* Preserve content styling */
+            .bible-quote {
+                font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+                font-style: italic;
+                color: #000;
+                background: #f0f4f8;
+                border-left: 4px solid #4299e1;
+                padding: 1.2rem 1.5rem;
+                margin: 1.5rem 0;
+                border-radius: 0 0.5rem 0.5rem 0;
+                page-break-inside: avoid;
+            }
+            
+            /* Make all quote classes black for printing */
+            .chapter-quote,
+            .bible-reference,
+            .callout-quote,
+            .callout-quote * {
+                color: #000 !important;
+            }
+            
+            /* Force all elements with inline color to be black when printing */
+            [style*="color"] {
+                color: #000 !important;
+            }
+            
+            .highlight,
+            .callout {
+                page-break-inside: auto;
+                margin: 1rem 0;
+            }
+            
+            /* Keep these sections together when possible */
+            .book-section,
+            .series-section {
+                page-break-inside: avoid;
+                margin: 1rem 0;
+            }
+            
+            /* Typography */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+                color: #000;
+            }
+            
+            h1 {
+                font-size: 22pt;
+                margin-bottom: 1rem;
+            }
+            
+            h2 {
+                font-size: 18pt;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            p {
+                page-break-inside: auto;
+                orphans: 2;
+                widows: 2;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Images */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+                display: block;
+                margin: 1rem auto;
+            }
+            
+            /* Page breaks */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+            
+            .chapter {
+                page-break-before: always;
+            }
+            
+            /* Tables */
+            table {
+                page-break-inside: auto;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+            
+            th, td {
+                border: 1px solid #000;
+                padding: 0.5rem;
+                text-align: left;
+            }
+            
+            /* Lists - allow to break across pages */
+            ul, ol {
+                page-break-inside: auto;
+            }
+            
+            /* Allow list items to break but keep minimal orphans/widows */
+            li {
+                orphans: 2;
+                widows: 2;
+            }
+            
+            /* Reduce margins on callout titles */
+            .callout-title {
+                margin-bottom: 0.5rem !important;
+                page-break-after: avoid;
+            }
+            
+                        /* Reduce margins on callout-quotes to prevent large gaps */
+            .callout-quote {
+                margin: 1rem 0 !important;
+                padding: 1rem !important;
+            }
+            
+/* Links */
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
+            }
+            
+            /* Preserve original container and layout */
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<body>
+<div class="container">
+<div class="chapter">
+<h1 class="chapter-title">Chapter 2: Jesus vs. the Punishing God</h1>
+<p class="chapter-quote">"The Father judges no one." - John 5:22</p>
+<p class="drop-cap">There are two voices echoing through Scripture.</p>
+<p>One <strong>thunders</strong>, <em>"Slay every man, woman, and child."</em></p>
+<p>The other <em>whispers</em>, <em>"Father, forgive them. They don't know what they're doing."</em></p>
+<p>And for <strong>two thousand years</strong>, the Church has tried to make them sound like the <strong>same person</strong>.</p>
+<h2>When God Looked Like a Tyrant</h2>
+<p>If you'd lived under the old covenant, you'd have met a God who <strong>kills first and explains later</strong>.</p>
+<p>He <strong>floods the world</strong>, orders <strong>genocide</strong>, <strong>burns cities</strong>, opens the earth to swallow dissenters. Check out this short list of some of his commands and decide whether the author of these commands loves humans.</p>
+<div class="callout">
+<div class="callout-title">List of some of Yahweh's Evil Commands</div>
+<ul class="bullet-points">
+<li>Kill adulterers (Lev 20:10)</li>
+<li>Kill all witches (Ex 22:18)</li>
+<li>Kill blasphemers (Lev 24:14)</li>
+<li>Kill false prophets (Zech 13:3)</li>
+<li>Kill fortune-tellers (Lev 20:27)</li>
+<li>Kill sons of sinners (Isaiah 14:21)</li>
+<li>Kill anyone who sins (Ezekiel 18:4)</li>
+<li>Kill anyone who curses God (Lev 24:16)</li>
+<li>Kill any child who hits a parent (Ex 21:15)</li>
+<li>Kill children who disobey parents (Dt 21:20)</li>
+<li>Kill those who work on the Sabbath (Ex 31:15)</li>
+<li>Kill all indigenous non-Hebrews (Dt 20:16–17)</li>
+<li>Kill those who curse father or mother (Lev 20:9)</li>
+<li>Kill men who have sex with other men (Lev 20:13)</li>
+<li>Kill any bride discovered not to be a virgin (Dt 22:21)</li>
+<li>Kill anyone who does not observe the Sabbath (Ex 31:14)</li>
+<li>Kill those who worship an Elohim other than Yahweh (Num 25:1–9)</li>
+<li>Kill anyone who approaches the moving Tabernacle (Num 1:48–51)</li>
+<li>Kill all males of conquered nations after winning battles (Dt 20:13)</li>
+<li>Kill the curious for peeking into the Ark of the Covenant (1 Sam 6:19–20)</li>
+<li>Kill everybody in a town, if some in that town worship the wrong god (Dt 13:13–16)</li>
+<li class="no-bullet"><strong>and:</strong></li>
+<li><strong>Kill anyone who kills anyone (Lev 24:17)</strong></li>
+</ul>
+</div>
+<p>His followers march with swords and <em>claim it's holy</em>.</p>
+<p>He's called <strong>Yahweh</strong>, <strong>Jehovah</strong>, the <strong>Lord of Hosts</strong> ... and His glory <em>smells of smoke</em>.</p>
+<p>People <strong>feared Him</strong>, but they <em>didn't love Him</em>.</p>
+<p><strong>How could they?</strong></p>
+<p>Love doesn't coexist with the <strong>constant threat of annihilation</strong>.</p>
+<p>And yet <em>religion called it obedience</em>.</p>
+<h2>When God Walked Among Us</h2>
+<p>Then <strong>Jesus</strong> stepped onto the stage.</p>
+<p>He <em>didn't come with thunder</em>.</p>
+<p>He came with <em>calloused hands and dusty feet</em>.</p>
+<p>He <strong>fed enemies</strong>. He <strong>touched the untouchable</strong>. He spoke of a Father whose rain falls on <em>both the wicked and the just</em>.</p>
+<p>And suddenly the world saw something it had <strong>never seen before</strong>:</p>
+<p>a God who <strong>doesn't need violence</strong> to prove His holiness.</p>
+<p>He called that God <strong>Father</strong>.</p>
+<p>Not <em>king</em>. Not <em>judge</em>. Not even <em>master</em>. And certainly <strong>NOT YAHWEH</strong>!</p>
+<p>Just <strong>Father</strong>.</p>
+<img alt="Yahweh vs Jesus' Father" class="chapter-image" src="../Images/yahweh_vs_jesus_father.jpg"/>
+<p>As mentioned at the end of the previous chapter, when His disciples wanted to <strong>destroy a Samaritan village</strong> with fire from heaven, just like <em>Elijah</em> had done, Jesus <strong>rebuked</strong> them:</p>
+<div class="callout-quote">
+                "You do not know <strong>what spirit you are of</strong>.<br/>
+                For the Son of Man <strong>did not come to destroy men's lives but to save them</strong>."
+            </div>
+<p><strong>That line alone dismantles centuries of theology</strong>.</p>
+<h2>The Collision</h2>
+<p>Jesus didn't just bring a new message; He <strong>exposed an old illusion</strong>.</p>
+<p>He said, "<strong>The Father judges no one.</strong>"</p>
+<div class="callout-quote">
+                "The Father judges no one."
+            </div>
+<p><em>Let that sink in.</em></p>
+<p><strong>NO ONE.</strong></p>
+<p><strong>Every Old Testament judgment</strong>, <strong>every massacre</strong> claimed in God's name. Jesus was <em>pulling the curtain back</em> on the <strong>human projection</strong> behind it.</p>
+<p>People had <em>blamed their violence on heaven</em>.</p>
+<p>He told His followers, "You have heard it said, '<strong>An eye for an eye</strong>,' but <strong>I say to you</strong>, do not resist an evil person."</p>
+<p>He was <strong>rewriting the script</strong>, line by line.</p>
+<p>Not because <em>God had changed</em>... but because humanity had finally met the <strong>REAL AUTHOR</strong>.</p>
+<h2>The Father Jesus Knew</h2>
+<p>The Father Jesus revealed <em>doesn't live in temples or books</em>.</p>
+<p>He <strong>doesn't demand sacrifices</strong>, He <strong>ends them</strong>.</p>
+<div class="callout-quote">
+                "For in the day that I brought them out of the land of Egypt, <strong>I DID NOT SPEAK TO YOUR FATHERS OR COMMAND THEM CONCERNING BURNT OFFERINGS AND SACRIFICES.</strong> But this is what I commanded them, saying, 'Obey My voice, and I will be your God, and you will be My people; and you will walk in all the way which I command you, that it may be well with you.'"
+                <span class="bible-reference">- Jeremiah 7:22-23</span>
+</div>
+<p>God is saying quite clearly <em>"If anyone told you to kill lambs and sprinkle the blood on doorposts, <strong>IT WAS NOT ME!</strong>"</em></p>
+<img alt="Doorposts and lintels with blood" class="chapter-image" src="../Images/doorposts_and_lintels.jpg"/>
+<p>He doesn't trade mercy for blood; He bleeds to end the trade.</p>
+<p>When His enemies nailed Him to wood, He prayed for them: not because it was strategic, but because <em>that's who the Father is</em>.</p>
+<p><strong>"Love your enemies,"</strong> He said,</p>
+<p>"that you may be <strong>children of your Father</strong> in heaven."</p>
+<div class="callout-quote">
+                "Love your enemies," He said,<br/>
+                "that you may be children of your Father in heaven."
+            </div>
+<p>The proof of divine sonship, in Jesus' logic, <em>isn't holiness through rule-keeping</em>.</p>
+<p>It's <strong>compassion toward the undeserving</strong>.</p>
+<p>So if our "God" still <strong>burns His enemies</strong>, maybe we're still worshipping the <strong>old one</strong>.</p>
+<h2>The Great Unlearning</h2>
+<p>It's hard to let go of the God we grew up <strong>fearing</strong>.</p>
+<p>He felt <em>safe</em>, in a twisted way. <strong>Predictable</strong>. <strong>Retributive</strong>.</p>
+<p>If we sinned, He <strong>punished</strong>. If we repented, He <strong>relented</strong>.</p>
+<p><em>Transactional, measurable, like a cosmic accountant</em>.</p>
+<img alt="Cosmic accountant" class="chapter-image" src="../Images/cosmic_accountant.jpg"/>
+<p>But Jesus asks for something <strong>more dangerous</strong>: <strong>TRUST</strong>.</p>
+<p>Trust that <strong>love is stronger than law</strong>.</p>
+<p>Trust that <strong>mercy doesn't make God weak</strong>.</p>
+<p>Trust that judgment is <em>not revenge</em> but <strong>restoration</strong>.</p>
+<p>That kind of trust feels like <strong>freefall</strong> at first.</p>
+<p>It's letting go of the <em>railings of religion</em> and discovering that what holds you is <strong>invisible</strong>, but <strong>real</strong>.</p>
+<h2>Jesus Redefines Fire and Judgment</h2>
+<p>When Jesus spoke of "fire," it was always <strong>cleansing</strong>.</p>
+<p>The fire that <strong>purifies gold</strong>, the <strong>baptism of fire</strong> that <strong>transforms hearts</strong>, the light that <strong>exposes darkness</strong>.</p>
+<p>When He warned of Gehenna, He <em>wasn't describing an eternal torture chamber</em>.</p>
+<p>He was warning His generation about the national collapse their hatred would bring: Jerusalem's coming destruction.</p>
+<p>The judgment He spoke of wasn't <em>cosmic condemnation</em>; it was <strong>truth unveiled</strong>.</p>
+<p>Whenever <strong>love shines on fear</strong>, fear feels like burning.</p>
+<p>That's the <strong>only fire Jesus ever promised</strong>: the <strong>fire of reality</strong>.</p>
+<h2>The Face of God Changes Forever</h2>
+<p>When Philip asked, "<strong>Show us the Father</strong>," Jesus <em>didn't hesitate</em>.</p>
+<div class="callout-quote">
+                "If you've seen Me, you've seen the Father."
+                <span class="bible-reference">- John 14:9</span>
+</div>
+<p>That sentence rewrote theology forever.</p>
+<p>No more contradictions. No more guessing games.</p>
+<p>The character of God is <em>not a collage of verses</em>: it's <strong>a single face</strong>.</p>
+<p>If anything in Scripture <strong>contradicts the compassion of Jesus</strong>,</p>
+<p>it <em>doesn't reveal God</em>: it reveals <strong>our misunderstanding of Him</strong>.</p>
+<h2>What Jesus Burned Down</h2>
+<p>Jesus <strong>burned the idea of divine favoritism</strong>. God does not have lists of names of 'the chosen ones', predestined not to burn, and a separate 'naughty list' for roasting. That was the twisted doctrine of someone (Paul) who had been deceived by a light-being pretending to be Jesus.</p>
+<p>Jesus <strong>burned down the altar of retribution</strong>.</p>
+<p>He <strong>burned the ledger</strong> that kept track of sins and sacrifices.</p>
+<p>He turned the word <em>repent</em> from <strong>self-loathing</strong> into <strong>awakening</strong>.</p>
+<p>He turned <em>judgment</em> from <strong>damnation</strong> into <strong>healing</strong>.</p>
+<p>He turned <em>obedience</em> from <strong>fear</strong> into <strong>love</strong>.</p>
+<p>When the Father spoke from heaven saying "<strong>This is my beloved Son; listen to Him</strong>", He <em>wasn't adding another voice</em>. He was <strong>replacing all the others</strong>.</p>
+<h2>Love Is the Only Theology Left Standing</h2>
+<p>In the end, Jesus left us with <strong>NO SAFE MIDDLE GROUND</strong>.</p>
+<p>Either <strong>God is love</strong>, or <strong>God is a monster with good PR</strong>.</p>
+<p><strong>There's no third option.</strong></p>
+<p>If we claim to follow Jesus but still worship the <strong>punishing god He came to expose</strong>,</p>
+<p>we've <strong>missed the point of his teachings</strong>.</p>
+<p>The cross <em>wasn't divine wrath unleashed</em>: it was <strong>divine innocence revealed</strong>.</p>
+<p>It <em>wasn't God demanding blood</em>; it was <strong>God enduring ours</strong>.</p>
+<p><strong>Hellfire religion</strong> says, "<strong>Obey or burn.</strong>"</p>
+<p><strong>Jesus</strong> says, "<strong>Wake up: you're already loved.</strong>"</p>
+<img alt="Hellfire religion" class="chapter-image" src="../Images/hellfire_religion.jpg"/>
+<h2>Summary</h2>
+<p>Jesus <em>didn't come to save us from God</em>.</p>
+<p>He came to save us from <strong>what we'd believed about God</strong>.</p>
+<p>The <strong>punishing deity we inherited</strong> was <em>never the Father of Jesus</em>.</p>
+<p>And once we see the difference, <strong>there's no going back</strong>.</p>
+<p>The next chapter will explore how <strong>fear crept back in</strong>: how Paul and the early theologians <strong>reinstalled the very dread</strong> Jesus had <strong>dismantled</strong>.</p>
+<p>But before we go there, <em>hold this truth close</em>:</p>
+<p>The <strong>only fire</strong> God sends is the fire that <strong>makes hearts new</strong>.</p>
+<p>The <strong>only judgment</strong> He brings is the one that <strong>heals</strong>.</p>
+<p>And the <strong>only thing</strong> He ever punishes is the <strong>lie</strong> that He could be <em>anything less than love</em>.</p>
+<div class="navigation-buttons">
+<a class="nav-button" href="chapter1.html">Previous</a>
+<a class="nav-button" href="toc.html">Contents</a>
+<a class="nav-button" href="part2.html">Next</a>
+</div>
+</div>
+</div>
+</body>
+</body>
+</html>

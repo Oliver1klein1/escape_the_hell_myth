@@ -1,0 +1,83 @@
+/* Calibre EPUB to PDF Conversion - Heading Size Fix */
+
+/* Reduce h1 size to be smaller than chapter titles */
+h1 {
+    font-size: 1.8em !important;
+    margin-top: 1.2em !important;
+    margin-bottom: 0.6em !important;
+}
+
+/* Ensure h2 headings are smaller than h1 and chapter titles */
+h2 {
+    font-size: 1.4em !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* Make h3 headings appropriately sized */
+h3 {
+    font-size: 1.2em !important;
+    margin-top: 0.8em !important;
+    margin-bottom: 0.4em !important;
+}
+
+/* Make h4 headings smaller */
+h4 {
+    font-size: 1.1em !important;
+    margin-top: 0.6em !important;
+    margin-bottom: 0.3em !important;
+}
+
+/* Ensure chapter titles remain the largest */
+.chapter-title {
+    font-size: 2.2em !important;
+    margin-bottom: 1.5em !important;
+}
+
+/* Override any Calibre-specific heading styles */
+body h1,
+body h2,
+body h3,
+body h4 {
+    font-weight: bold !important;
+    color: #2a4365 !important;
+}
+
+/* Specific fixes for problematic headings */
+h1:not(.chapter-title) {
+    font-size: 1.6em !important;
+}
+
+h2:not(.chapter-title) {
+    font-size: 1.3em !important;
+}
+
+/* Ensure proper hierarchy - chapter titles should be largest */
+h1.chapter-title,
+.chapter-title {
+    font-size: 2.2em !important;
+    text-align: center !important;
+}
+
+/* Additional Calibre-specific overrides */
+@page {
+    margin: 1in;
+}
+
+/* Force smaller headings in Calibre PDF conversion */
+div[class*="chapter"] h1,
+div[class*="chapter"] h2,
+div[class*="chapter"] h3,
+div[class*="chapter"] h4 {
+    font-size: inherit !important;
+}
+
+/* Specific targeting for headings that appear too large */
+h1:not(.chapter-title):not([class*="chapter"]) {
+    font-size: 1.5em !important;
+}
+
+h2:not(.chapter-title):not([class*="chapter"]) {
+    font-size: 1.2em !important;
+}
+

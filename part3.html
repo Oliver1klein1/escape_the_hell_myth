@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reality Unveiled: Part 3 - The Nature of Consciousness</title>
+    <title>Escape The Hell Myth: Part 3 - Clearing Up The "Hell" Texts</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -102,16 +102,193 @@
                 text-align: center;
             }
         }
+
+        /* Print-specific styles */
+        @media print {
+            /* Page setup */
+            @page {
+                size: 8.5in 11in;
+                margin: 1in;
+            }
+            
+            /* Base styles */
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 14pt;
+                line-height: 1.6;
+                color: #000;
+                background: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* Hide navigation */
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            nav,
+            .navbar,
+            .menu,
+            .breadcrumb,
+            .pagination,
+            [class*="nav"],
+            [class*="menu"],
+            [class*="breadcrumb"] {
+                display: none !important;
+            }
+            
+            /* Preserve content styling */
+            .bible-quote {
+                font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+                font-style: italic;
+                color: #000;
+                background: #f0f4f8;
+                border-left: 4px solid #4299e1;
+                padding: 1.2rem 1.5rem;
+                margin: 1.5rem 0;
+                border-radius: 0 0.5rem 0.5rem 0;
+                page-break-inside: avoid;
+            }
+            
+            .highlight,
+            .callout {
+                page-break-inside: auto;
+                margin: 1rem 0;
+            }
+            
+            /* Keep these sections together when possible */
+            .book-section,
+            .series-section {
+                page-break-inside: avoid;
+                margin: 1rem 0;
+            }
+            
+            /* Typography */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+                color: #000;
+            }
+            
+            h1 {
+                font-size: 22pt;
+                margin-bottom: 1rem;
+            }
+            
+            h2 {
+                font-size: 18pt;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .callout-title {
+                margin-bottom: 0.5rem !important;
+                page-break-after: avoid;
+            }
+            
+            p {
+                page-break-inside: auto;
+                orphans: 2;
+                widows: 2;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Allow list items to break but keep paragraphs intact */
+            li {
+                orphans: 2;
+                widows: 2;
+            }
+            
+            /* Images */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+                display: block;
+                margin: 1rem auto;
+            }
+            
+            /* Page breaks */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+            
+            .chapter {
+                page-break-before: always;
+            }
+            
+            /* Tables */
+            table {
+                page-break-inside: auto;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            /* Keep table rows together when possible */
+            tr {
+                page-break-inside: avoid;
+            }
+            
+            th, td {
+                border: 1px solid #000;
+                padding: 0.5rem;
+                text-align: left;
+            }
+            
+            /* Allow info-boxes (like the prophecy table box) to break */
+            .info-box {
+                page-break-inside: auto;
+            }
+            
+            /* Reduce info-box title margins */
+            .info-box-title {
+                margin-bottom: 0.75rem !important;
+                page-break-after: avoid;
+            }
+            
+                        /* Reduce margins on callout-quotes to prevent large gaps */
+            .callout-quote {
+                margin: 1rem 0 !important;
+                padding: 1rem !important;
+            }
+            
+/* Lists */
+
+            ul, ol {
+                page-break-inside: auto;
+            }
+            
+            /* Links */
+            a {
+                color: #000;
+                text-decoration: none;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
+            }
+            
+            /* Preserve original container and layout */
+            .container {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="part-number">Part 3</h1>
-        <h2 class="subtitle">The Power Of Knowing Who We Are</h2>
+        <h2 class="subtitle">Clearing Up The "Hell" Texts</h2>
         
         <div class="navigation-buttons">
-            <a href="chapter6.html" class="nav-button">Previous: Chapter 6</a>
-            <a href="chapter7.html" class="nav-button">Next: Chapter 7</a>
+            <a href="chapter3.html" class="nav-button">Previous: Chapter 3</a>
+            <a href="chapter4.html" class="nav-button">Next: Chapter 4</a>
         </div>
     </div>
 </body>

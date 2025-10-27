@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="book-id" version="2.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:identifier id="book-id">urn:uuid:550e8400-e29b-41d4-a716-446655440000</dc:identifier>
+    <dc:title>Escape The Hell Myth: Rediscover The Teachings Of Jesus On Love</dc:title>
+    <dc:creator opf:file-as="Boff, Ansilo" opf:role="aut">Ansilo Boff</dc:creator>
+    <dc:subject>Hell Doctrine</dc:subject>
+    <dc:subject>Psychological Trauma</dc:subject>
+    <dc:subject>Paul Theology</dc:subject>
+    <dc:subject>Jesus Teachings</dc:subject>
+    <dc:subject>Universal Reconciliation</dc:subject>
+    <dc:subject>Biblical Inerrancy</dc:subject>
+    <dc:subject>Fear vs Love</dc:subject>
+    <dc:subject>Yahweh vs Father</dc:subject>
+    <dc:subject>Jesus vs Paul</dc:subject>
+    <dc:subject>Spiritual Liberation</dc:subject>
+    <dc:description>This book challenges traditional hell doctrine and reveals how Jesus' authentic teachings about unconditional love and universal reconciliation have been obscured by fear-based theology.</dc:description>
+    <dc:publisher>Truth Beyond Tradition</dc:publisher>
+    <dc:date opf:event="publication">2025</dc:date>
+    <dc:language>en</dc:language>
+    <dc:rights>© 2025 Ansilo Boff. All rights reserved.</dc:rights>
+    <meta name="cover" content="cover-image"/>
+  </metadata>
+  
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="cover-image" href="images/cover.jpg" media-type="image/jpeg"/>
+    <item id="copyright" href="copyright.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction" href="introduction.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter1" href="chapter1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter2" href="chapter2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter3" href="chapter3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter4" href="chapter4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter5" href="chapter5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter6" href="chapter6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter7" href="chapter7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter8" href="chapter8.xhtml" media-type="application/xhtml+xml"/>
+    <item id="conclusion" href="conclusion.xhtml" media-type="application/xhtml+xml"/>
+    <item id="other-books" href="other-books.xhtml" media-type="application/xhtml+xml"/>
+    <item id="appendix" href="appendix.xhtml" media-type="application/xhtml+xml"/>
+    <item id="bibliography" href="bibliography.xhtml" media-type="application/xhtml+xml"/>
+    <item id="css" href="styles.css" media-type="text/css"/>
+    <item id="img-1" href="images/abilities.jpg" media-type="image/jpeg"/>
+    <item id="img-2" href="images/abundant-life.jpg" media-type="image/jpeg"/>
+    <item id="img-3" href="images/b1-mum-son2.jpg" media-type="image/jpeg"/>
+    <item id="img-4" href="images/b2-dad-son-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-5" href="images/b3_dad_daughter_cover.jpg" media-type="image/jpeg"/>
+    <item id="img-6" href="images/b4_mum-daughter.jpg" media-type="image/jpeg"/>
+    <item id="img-7" href="images/baby.jpg" media-type="image/jpeg"/>
+    <item id="img-8" href="images/balloon.jpg" media-type="image/jpeg"/>
+    <item id="img-9" href="images/belief-examples.jpg" media-type="image/jpeg"/>
+    <item id="img-10" href="images/bible-contradictions-cover-final.jpg" media-type="image/jpeg"/>
+    <item id="img-11" href="images/brain-programming.jpg" media-type="image/jpeg"/>
+    <item id="img-12" href="images/brain2.jpg" media-type="image/jpeg"/>
+    <item id="img-13" href="images/cereal.jpg" media-type="image/jpeg"/>
+    <item id="img-14" href="images/change-tyre.jpg" media-type="image/jpeg"/>
+    <item id="img-15" href="images/clock.jpg" media-type="image/jpeg"/>
+    <item id="img-16" href="images/coincidence.jpg" media-type="image/jpeg"/>
+    <item id="img-17" href="images/coming_on_clouds.jpg" media-type="image/jpeg"/>
+    <item id="img-18" href="images/contain-it.jpg" media-type="image/jpeg"/>
+    <item id="img-19" href="images/cosmic_accountant.jpg" media-type="image/jpeg"/>
+    <item id="img-20" href="images/cosmic_fireworks.jpg" media-type="image/jpeg"/>
+    <item id="img-21" href="images/doorposts_and_lintels.jpg" media-type="image/jpeg"/>
+    <item id="img-22" href="images/emotions-desires.jpg" media-type="image/jpeg"/>
+    <item id="img-23" href="images/emperor5.jpg" media-type="image/jpeg"/>
+    <item id="img-24" href="images/end_of_an_age.jpg" media-type="image/jpeg"/>
+    <item id="img-25" href="images/faith-mountains.jpg" media-type="image/jpeg"/>
+    <item id="img-26" href="images/falling-off-ladder.jpg" media-type="image/jpeg"/>
+    <item id="img-27" href="images/father_forgiving.png" media-type="image/png"/>
+    <item id="img-28" href="images/fear_cycle.jpg" media-type="image/jpeg"/>
+    <item id="img-29" href="images/fear_works.jpg" media-type="image/jpeg"/>
+    <item id="img-30" href="images/fh-book1-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-31" href="images/fh-book2-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-32" href="images/fh-book3-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-33" href="images/fh-book4-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-34" href="images/fh-book5-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-35" href="images/finding_rest.jpg" media-type="image/jpeg"/>
+    <item id="img-36" href="images/fire_purifies.jpg" media-type="image/jpeg"/>
+    <item id="img-37" href="images/fireplace.jpg" media-type="image/jpeg"/>
+    <item id="img-38" href="images/flowers-and-butterflies.jpg" media-type="image/jpeg"/>
+    <item id="img-39" href="images/framing-jesus-cover-final.jpg" media-type="image/jpeg"/>
+    <item id="img-40" href="images/free_heart.jpg" media-type="image/jpeg"/>
+    <item id="img-41" href="images/grave1.jpg" media-type="image/jpeg"/>
+    <item id="img-42" href="images/healing_hand.jpg" media-type="image/jpeg"/>
+    <item id="img-43" href="images/heart2.jpg" media-type="image/jpeg"/>
+    <item id="img-44" href="images/heart3.jpg" media-type="image/jpeg"/>
+    <item id="img-45" href="images/heart7.jpg" media-type="image/jpeg"/>
+    <item id="img-46" href="images/hell.jpg" media-type="image/jpeg"/>
+    <item id="img-47" href="images/hellfire_religion.jpg" media-type="image/jpeg"/>
+    <item id="img-48" href="images/infinite-intel.jpg" media-type="image/jpeg"/>
+    <item id="img-49" href="images/ink-parchment.jpg" media-type="image/jpeg"/>
+    <item id="img-50" href="images/jesus_unexpected_god.jpg" media-type="image/jpeg"/>
+    <item id="img-51" href="images/lake_of_fire_seasons.jpg" media-type="image/jpeg"/>
+    <item id="img-52" href="images/levels-of-self.jpg" media-type="image/jpeg"/>
+    <item id="img-53" href="images/liberating-humanity-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-54" href="images/line_a_and_b.jpg" media-type="image/jpeg"/>
+    <item id="img-55" href="images/line-a.jpg" media-type="image/jpeg"/>
+    <item id="img-56" href="images/line-b.jpg" media-type="image/jpeg"/>
+    <item id="img-57" href="images/listen.jpg" media-type="image/jpeg"/>
+    <item id="img-58" href="images/live-in-the-now.jpg" media-type="image/jpeg"/>
+    <item id="img-59" href="images/manifesting-miracles-guide-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-60" href="images/money_roman.png" media-type="image/png"/>
+    <item id="img-61" href="images/morality.jpg" media-type="image/jpeg"/>
+    <item id="img-62" href="images/morphic-field.jpg" media-type="image/jpeg"/>
+    <item id="img-63" href="images/paul7.jpg" media-type="image/jpeg"/>
+    <item id="img-64" href="images/pigs.jpg" media-type="image/jpeg"/>
+    <item id="img-65" href="images/reality-unveiled-cover.jpg" media-type="image/jpeg"/>
+    <item id="img-66" href="images/release.jpg" media-type="image/jpeg"/>
+    <item id="img-67" href="images/rest-easy.jpg" media-type="image/jpeg"/>
+    <item id="img-68" href="images/revelation-cover.png" media-type="image/png"/>
+    <item id="img-69" href="images/rich_man_lazarus.jpg" media-type="image/jpeg"/>
+    <item id="img-70" href="images/roots-awareness.jpg" media-type="image/jpeg"/>
+    <item id="img-71" href="images/scoreboard2.jpg" media-type="image/jpeg"/>
+    <item id="img-72" href="images/six-witnesses.jpg" media-type="image/jpeg"/>
+    <item id="img-73" href="images/smartphone.jpg" media-type="image/jpeg"/>
+    <item id="img-74" href="images/the-kingdom-within.jpg" media-type="image/jpeg"/>
+    <item id="img-75" href="images/ways-to-connect.jpg" media-type="image/jpeg"/>
+    <item id="img-76" href="images/yahweh_vs_jesus_father.jpg" media-type="image/jpeg"/>
+    <item id="img-77" href="images/TBT-Publishing.jpg" media-type="image/jpeg"/>
+  </manifest>
+  
+  <spine toc="ncx">
+    <itemref idref="cover"/>
+    <itemref idref="copyright"/>
+    <itemref idref="introduction"/>
+    <itemref idref="chapter1"/>
+    <itemref idref="chapter2"/>
+    <itemref idref="chapter3"/>
+    <itemref idref="chapter4"/>
+    <itemref idref="chapter5"/>
+    <itemref idref="chapter6"/>
+    <itemref idref="chapter7"/>
+    <itemref idref="chapter8"/>
+    <itemref idref="conclusion"/>
+    <itemref idref="other-books"/>
+    <itemref idref="appendix"/>
+    <itemref idref="bibliography"/>
+  </spine>
+  
+  <guide>
+    <reference type="cover" title="Cover" href="cover.xhtml"/>
+    <reference type="text" title="Start" href="introduction.xhtml"/>
+  </guide>
+</package>

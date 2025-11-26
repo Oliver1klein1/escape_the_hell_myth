@@ -22,7 +22,7 @@
             font-family: 'Merriweather', serif;
             color: var(--dark-text);
             line-height: 1.8;
-            background-color: var(--light-bg);
+            background-color: white;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0;
@@ -80,6 +80,7 @@
         .chapter-title {
             text-align: center;
             font-size: 2.25rem;
+            margin-top: 0.5rem;
             margin-bottom: 2rem;
         }
         
@@ -253,12 +254,17 @@
             /* Base styles */
             body {
                 font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 14pt;
+                font-size: 11.5pt !important;
                 line-height: 1.6;
                 color: #000;
                 background: #fff;
                 margin: 0;
                 padding: 0;
+            }
+            
+            /* Force font size on all text elements except headings */
+            body, p, div, span, li, td, th, .container, .chapter, .bible-quote, .callout-quote, .callout, .highlight, em, strong {
+                font-size: 11.5pt !important;
             }
             
             /* Hide navigation */
@@ -311,12 +317,12 @@
             }
             
             h1 {
-                font-size: 22pt;
+                font-size: 22pt !important;
                 margin-bottom: 1rem;
             }
             
             h2 {
-                font-size: 18pt;
+                font-size: 18pt !important;
                 margin-top: 1.5rem;
                 margin-bottom: 0.5rem;
             }
@@ -326,6 +332,7 @@
             }
             
             p {
+                font-size: 11.5pt !important;
                 page-break-inside: auto;
                 orphans: 2;
                 widows: 2;
@@ -415,7 +422,10 @@
             
             /* Preserve original container and layout */
             .container {
-                padding: 20px;
+                width: 100% !important;
+                max-width: 950px !important;
+                margin: 0 auto !important;
+                padding: 20px !important;
             }
         }
     </style>
@@ -432,7 +442,7 @@
         
         <p>The twelve of us gathered around the fireplace had become close friends. Tuesday nights were always something to look forward to… not just for the coffee and cookies, but for the chance to exchange ideas on spiritual matters and pray for one another in the chaos of modern life.</p>
         
-        <img src="fireplace.jpg" alt="Cosy fireplace scene" class="chapter-image">
+        <img src="fireplace77.jpg" alt="Cosy fireplace scene" class="chapter-image">
         
         <p><em>"What's your definition of hell?"</em> I asked.</p>
         
@@ -484,7 +494,7 @@
         
         <p>That <strong>woke everyone up</strong>.</p>
         
-        <img src="baby.jpg" alt="Baby" class="chapter-image">
+        <img src="baby_hell.jpg" alt="Baby" class="chapter-image">
         
         <p><em>"Definitely not,"</em> came the unanimous chorus.</p>
         
@@ -517,6 +527,8 @@
         <p><em>"Want my take?"</em> I asked. When they nodded, I spoke slowly and deliberately.</p>
         
         <p><em>"If what traditional Christianity teaches about hell is true, that woman should be <strong>rewarded</strong> for robbing Satan of three souls. In fact, if we truly believed what we say we do, we'd <strong>march into neonatal wards with semiautomatic weapons</strong> and send every baby to heaven before they could sin. Hell would be emptier, Satan poorer, and God richer. We'd have robbed them of a few decades on earth, sure. But isn't that worth an <strong>eternity of bliss</strong>?"</em></p>
+        
+        <img src="neonatal_ward.jpg" alt="Neonatal ward" class="chapter-image">
         
         <p>The words <strong>hung in the air</strong>. One by one, I saw <strong>realization dawn</strong> on their faces:</p>
         

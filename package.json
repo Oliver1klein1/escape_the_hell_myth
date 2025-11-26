@@ -1,13 +1,23 @@
 {
-  "name": "reality-unveiled",
+  "name": "escape-hell",
   "version": "1.0.0",
-  "description": "Static server for Reality Unveiled book",
-  "main": "server.js",
+  "description": "Next.js server for Escape The Hell Myth book",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": ["book", "static", "server"],
+  "keywords": ["book", "nextjs", "server"],
   "author": "Ansilo Boff",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  }
 }

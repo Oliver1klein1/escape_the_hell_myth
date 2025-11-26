@@ -22,7 +22,7 @@
             font-family: 'Merriweather', serif;
             color: var(--dark-text);
             line-height: 1.8;
-            background-color: var(--light-bg);
+            background-color: white;
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
@@ -81,6 +81,7 @@
         .chapter-title {
             text-align: center;
             font-size: 2.25rem;
+            margin-top: 0.5rem;
             margin-bottom: 2rem;
         }
         
@@ -219,6 +220,31 @@
             border-top: 1px solid var(--secondary-color);
         }
 
+        .chapter-image {
+            width: 80%;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .chapter-image:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 1024px) {
+            .chapter-image {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chapter-image {
+                width: 100%;
+            }
+        }
+
         /* Print-specific styles */
         @media print {
             /* Page setup */
@@ -230,13 +256,13 @@
             /* Base styles */
             body {
                 font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 14pt;
+                font-size: 11.5pt !important;
                 line-height: 1.6;
                 color: #000;
                 background: #fff;
                 margin: 0;
                 padding: 0;
-            }
+            }`n            `n            body, p, div, span, li, td, th {`n                font-size: 11.5pt !important;`n            }
             
             /* Hide navigation */
             .navigation,
@@ -269,7 +295,7 @@
             
             .highlight,
             .callout {
-                page-break-inside: auto;
+                page-break-inside: auto;`n                font-size: 11.5pt !important;
                 margin: 1rem 0;
             }
             
@@ -303,7 +329,7 @@
             }
             
             p {
-                page-break-inside: auto;
+                page-break-inside: auto;`n                font-size: 11.5pt !important;
                 orphans: 2;
                 widows: 2;
                 margin-bottom: 0.5rem;
@@ -445,6 +471,8 @@
         
         <p>He was <strong>ending an illusion</strong>.</p>
         
+        <img src="finished.jpg" alt="Finished" class="chapter-image">
+        
         <p>The illusion that <em>God needs payment</em>.</p>
         
         <p>The illusion that <em>love must be earned</em>.</p>
@@ -499,6 +527,8 @@
         
         <p>It was <strong>a mindset</strong>.</p>
         
+        <img src="mindset.jpg" alt="Mindset" class="chapter-image">
+        
         <p>A <em>wound in the human imagination</em>, convincing us that <strong>separation was real</strong>.</p>
         
         <p>But <strong>Jesus stepped into that wound</strong> and filled it with Himself.</p>
@@ -536,6 +566,8 @@
         <p>One day, when this story is finished, and all the illusions have burned away, the universe will echo with <strong>a single truth</strong>:</p>
         
         <p><strong>No one was ever outside the reach of love</strong>.</p>
+        
+        <img src="no_one_outside.jpg" alt="No one outside the reach of love" class="chapter-image">
         
         <p>Every tear will be wiped away, not by <em>decree</em>, but by <strong>recognition</strong>.</p>
         

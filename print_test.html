@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print Color Test</title>
+    <style>
+        /* Screen styles - with colors */
+        body {
+            font-family: Georgia, serif;
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #2a4365;
+        }
+        
+        .blue-text {
+            color: blue;
+        }
+        
+        .red-text {
+            color: red;
+        }
+        
+        .green-bg {
+            background-color: #90EE90;
+            padding: 10px;
+        }
+        
+        .colored-border {
+            border: 3px solid purple;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        /* ========================================
+           PRINT STYLES - Everything should be BLACK
+           ======================================== */
+        @media print {
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+            }
+            
+            /* Universal reset */
+            * {
+                color: #000 !important;
+                background: transparent !important;
+                background-color: transparent !important;
+                background-image: none !important;
+                box-shadow: none !important;
+                text-shadow: none !important;
+                border-color: #000 !important;
+            }
+            
+            html, body {
+                background: #fff !important;
+                background-color: #fff !important;
+            }
+            
+            body {
+                font-size: 12px !important;
+            }
+            
+            h1, h2, h3, p, span, div {
+                color: #000 !important;
+            }
+            
+            .blue-text,
+            .red-text {
+                color: #000 !important;
+            }
+            
+            .green-bg {
+                background: transparent !important;
+                background-color: transparent !important;
+            }
+            
+            .colored-border {
+                border-color: #000 !important;
+            }
+            
+            /* Grayscale images */
+            img {
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Print Color Test Page</h1>
+    
+    <p>This page tests whether print styles are working correctly.</p>
+    
+    <h2>Text Color Tests</h2>
+    <p class="blue-text">This text should be BLUE on screen, BLACK in print.</p>
+    <p class="red-text">This text should be RED on screen, BLACK in print.</p>
+    
+    <h2>Background Color Tests</h2>
+    <div class="green-bg">
+        This box has a GREEN background on screen. In print, the background should be WHITE/transparent.
+    </div>
+    
+    <h2>Border Color Test</h2>
+    <div class="colored-border">
+        This box has a PURPLE border on screen. In print, the border should be BLACK.
+    </div>
+    
+    <h2>Image Test</h2>
+    <p>If you see a color image below, it should print in GRAYSCALE:</p>
+    <img src="cover.jpg" alt="Test image" style="max-width: 200px; height: auto;">
+    
+    <hr>
+    
+    <h2>Instructions</h2>
+    <ol>
+        <li>Press CTRL+P to open the print dialog</li>
+        <li>Check the preview - ALL text should be black</li>
+        <li>Background colors should be gone (white/transparent)</li>
+        <li>Borders should be black</li>
+        <li>Image should be grayscale</li>
+    </ol>
+    
+    <p><strong>If colors still appear in the preview:</strong></p>
+    <ol>
+        <li>In Chrome/Edge: Click "More settings" → Set "Color" to "Black and white"</li>
+        <li>Uncheck "Background graphics"</li>
+        <li>Then check the preview again</li>
+    </ol>
+    
+    <p><strong>Note:</strong> Some browsers require the print dialog setting to be "Black and white" or "Grayscale" - CSS alone cannot always override this.</p>
+</body>
+</html>
+

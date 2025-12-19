@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="page-size" content="6in 9in">
+    <title>Escape The Hell Myth: Acknowledgments</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #7f9cf5;
+            --accent-color: #f6ad55;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            background-color: white;
+            max-width: 100% !important;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .acknowledgments {
+            padding: 2rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 0.5rem;
+            margin: 1em auto;
+            max-width: 950px;
+            width: 100%;
+        }
+        
+        .acknowledgments-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 3rem;
+            padding: 1rem 0;
+            border-top: 1px solid var(--secondary-color);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Print-specific styles */
+        /* Print-specific styles - BLACK AND WHITE */
+        @media print {
+            /* ============================================
+               0. UNIVERSAL NAVIGATION HIDING - HIGHEST PRIORITY
+               Must be FIRST to override all inline styles
+               ============================================ */
+            /* Universal rule to hide ALL navigation elements - placed FIRST for priority */
+            *[class*="nav"],
+            *[class*="button"]:not([class*="content"]):not([class*="text"]),
+            *[class*="menu"],
+            *[class*="breadcrumb"],
+            header,
+            footer,
+            nav,
+            .navbar,
+            .nav,
+            .nav-bar,
+            .site-header,
+            .site-footer,
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            .nav-buttons,
+            .pagination,
+            .breadcrumbs,
+            .breadcrumb,
+            .toc-controls,
+            .btn,
+            .button,
+            .icon-button,
+            .back-to-top,
+            .menu,
+            .enter-button {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Override inline display:inline-block styles with attribute selectors */
+            nav[style*="display"],
+            nav[style*="display:inline-block"],
+            nav[style*="display: inline-block"],
+            nav[style*="display:inline-block;"],
+            nav[style*="display: inline-block;"],
+            .nav-buttons[style*="display"],
+            .nav-buttons[style*="display:inline-block"],
+            .nav-buttons[style*="display: inline-block"],
+            .nav-buttons[style*="display:inline-block;"],
+            .nav-buttons[style*="display: inline-block;"],
+            .navigation-buttons[style*="display"],
+            .navigation-buttons[style*="display:inline-block"],
+            .navigation-buttons[style*="display: inline block"],
+            .navigation-buttons[style*="display:inline-block;"],
+            .navigation-buttons[style*="display: inline-block;"],
+            .nav-button[style*="display"],
+            .nav-button[style*="display:inline-block"],
+            .nav-button[style*="display: inline-block"],
+            .nav-button[style*="display:inline-block;"],
+            .nav-button[style*="display: inline-block;"],
+            .enter-button[style*="display"],
+            .enter-button[style*="display:inline-block"],
+            .enter-button[style*="display: inline-block"],
+            .enter-button[style*="display:inline-block;"],
+            .enter-button[style*="display: inline-block;"],
+            .btn[style*="display"],
+            .btn[style*="display:inline-block"],
+            .btn[style*="display: inline-block"],
+            .btn[style*="display:inline-block;"],
+            .btn[style*="display: inline-block;"],
+            .button[style*="display"],
+            .button[style*="display:inline-block"],
+            .button[style*="display: inline-block"],
+            .button[style*="display:inline-block;"],
+            .button[style*="display: inline-block;"],
+            a[style*="display"][class*="nav"],
+            a[style*="display:inline-block"][class*="nav"],
+            a[style*="display: inline-block"][class*="nav"],
+            a[style*="display:inline-block;"][class*="nav"],
+            a[style*="display: inline-block;"][class*="nav"],
+            a[style*="display"][class*="button"],
+            a[style*="display:inline-block"][class*="button"],
+            a[style*="display: inline-block"][class*="button"],
+            a[style*="display:inline-block;"][class*="button"],
+            a[style*="display: inline-block;"][class*="button"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
+            }
+            
+            /* ============================================
+               1. PAGE SIZE & LAYOUT - 6x9 inches
+               Enhanced with multiple declarations for better browser support
+               ============================================ */
+            /* Standard CSS3 @page rule */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Alternative size declarations for better browser compatibility */
+            @page {
+                size: 152.4mm 228.6mm; /* 6" x 9" in millimeters */
+                margin: 19.05mm; /* 0.75" in millimeters */
+            }
+            
+            /* Webkit-specific page size */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* ============================================
+               2. BLACK AND WHITE PRINTING - GRAYSCALE
+               ============================================ */
+            /* Force grayscale/black and white printing */
+            html, body {
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
+            }
+            
+            /* Universal reset: remove shadows/animations, force black text */
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+                animation: none !important;
+                transition: none !important;
+                -webkit-print-color-adjust: economy !important;
+                print-color-adjust: economy !important;
+                color-adjust: economy !important;
+            }
+            
+            /* Force all text to black */
+            body,
+            p,
+            h1, h2, h3, h4, h5, h6,
+            li,
+            td, th,
+            span,
+            div,
+            a {
+                color: #000000 !important;
+                background-color: transparent !important;
+            }
+            
+            /* Force all backgrounds to white */
+            body {
+                background-color: #ffffff !important;
+            }
+            /* Container should fill printable area */
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            
+            /* Body setup for 6x9 trade paperback */
+            body {
+                font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+                margin: 0;
+                padding: 0;
+                line-height: 1.5;
+                font-size: 11pt !important;
+                overflow: visible !important;
+                max-width: 100% !important;
+                width: 100% !important;
+                color: #000000 !important;
+                background-color: #ffffff !important;
+            }
+            /* Container should fill printable area */
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            
+            /* Body text at 11pt - standard for 6x9 trade paperback */
+            p, li {
+                font-size: 11pt !important;
+                color: #000000 !important;
+            }
+            
+            /* Typography */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+                color: #000000 !important;
+            }
+            
+            h1, .chapter-title {
+                font-size: 22pt;
+                margin-bottom: 1rem;
+                color: #000000 !important;
+            }
+            
+            h2 {
+                font-size: 18pt;
+                margin-top: 1.5rem;
+                margin-bottom: 0.5rem;
+                color: #000000 !important;
+            }
+            
+            .callout-title {
+                margin-bottom: 0.5rem !important;
+                page-break-after: avoid;
+                color: #000000 !important;
+            }
+            
+            p {
+                font-size: 11pt !important;
+                page-break-inside: auto;
+                orphans: 2;
+                widows: 2;
+                margin-bottom: 0.5em;
+                color: #000000 !important;
+            }
+            
+            li {
+                orphans: 2;
+                widows: 2;
+                font-size: 11pt !important;
+                color: #000000 !important;
+            }
+            
+            th, td {
+                font-size: 10pt !important;
+                color: #000000 !important;
+                border-color: #000000 !important;
+            }
+            
+            /* Links - black text, no underline */
+            a {
+                text-decoration: none !important;
+                color: #000000 !important;
+            }
+            
+            /* ============================================
+               3. IMAGES PRINT IN GRAYSCALE
+               ============================================ */
+            /* Images print in grayscale for black and white */
+            img,
+            img.chapter-image,
+            img.book-cover,
+            img.callout-image,
+            img.figure,
+            img.cover-img,
+            img.logo-image,
+            img.logo-image-top,
+            img.acknowledgments-image {
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+                display: block;
+                margin: 1rem auto;
+            }
+            
+            /* ============================================
+               4. PAGE BREAKS & LAYOUT
+               ============================================ */
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .no-break {
+                page-break-inside: avoid;
+            }
+            
+            .chapter {
+                page-break-before: always;
+            }
+            
+            /* Tables */
+            table {
+                page-break-inside: auto;
+                border-collapse: collapse;
+                width: 100%;
+                border-color: #000000 !important;
+            }
+            
+            tr {
+                page-break-inside: avoid;
+            }
+            
+            th, td {
+                padding: 0.5rem;
+                text-align: left;
+                border: 1px solid #000000 !important;
+                color: #000000 !important;
+            }
+            
+            /* Content boxes - black borders and text */
+            .highlight,
+            .callout {
+                page-break-inside: auto;
+                margin: 1rem 0;
+                border-color: #000000 !important;
+                color: #000000 !important;
+            }
+            
+            .book-section,
+            .series-section {
+                page-break-inside: avoid;
+                margin: 1rem 0;
+            }
+            
+            .info-box {
+                page-break-inside: auto;
+                border-color: #000000 !important;
+                color: #000000 !important;
+            }
+            
+            .info-box-title {
+                margin-bottom: 0.75rem !important;
+                page-break-after: avoid;
+                color: #000000 !important;
+            }
+            
+            .callout-quote {
+                margin: 1rem 0 !important;
+                padding: 1rem !important;
+                page-break-inside: avoid;
+                border-color: #000000 !important;
+                color: #000000 !important;
+            }
+            
+            .bible-quote {
+                page-break-inside: avoid;
+                border-color: #000000 !important;
+                color: #000000 !important;
+            }
+            
+            ul, ol {
+                page-break-inside: auto;
+            }
+            
+            /* ============================================
+               5. CONTAINER LAYOUT FOR PRINT
+               ============================================ */
+            /* Container must have NO max-width for print - let it fill the page */
+            .container,
+            .chapter,
+            body > div {
+                width: 100% !important;
+                max-width: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+                overflow: visible !important;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="acknowledgments">
+        <img src="acknowledgments_hell2.jpg" alt="Acknowledgments" class="acknowledgments-image">
+        
+        <div class="navigation-buttons">
+            <a href="author-bio.html" class="nav-button">Previous: Author Biography</a>
+            <a href="toc.html" class="nav-button">Contents</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="page-size" content="6in 9in">
+    <title>Author Biography - Escape The Hell Myth</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" media="screen">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2a4365;
+            --secondary-color: #7f9cf5;
+            --accent-color: #f6ad55;
+            --light-bg: #f7fafc;
+            --dark-text: #2d3748;
+            --light-text: #fff;
+        }
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-text);
+            line-height: 1.8;
+            background-color: white;
+            max-width: 100% !important;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: justify;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .author-bio-image {
+            width: 30%;
+            height: auto;
+            margin: 0 auto 1.5em auto;
+            display: block;
+        }
+        
+        .author-bio-text {
+            text-align: justify;
+            line-height: 1.7;
+            color: #2d3748;
+        }
+        
+        .author-bio-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 3rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid var(--secondary-color);
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Print-specific styles */
+        @media print {
+            /* Universal rule to hide ALL navigation elements - placed FIRST for priority */
+            *[class*="nav"],
+            *[class*="button"]:not([class*="content"]):not([class*="text"]),
+            *[class*="menu"],
+            *[class*="breadcrumb"],
+            header,
+            footer,
+            nav,
+            .navbar,
+            .nav,
+            .nav-bar,
+            .site-header,
+            .site-footer,
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            .nav-buttons,
+            .pagination,
+            .breadcrumbs,
+            .breadcrumb,
+            .toc-controls,
+            .btn,
+            .button,
+            .icon-button,
+            .back-to-top,
+            .menu,
+            .enter-button {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Override inline display:inline-block styles with attribute selectors */
+            nav[style*="display"],
+            nav[style*="display:inline-block"],
+            nav[style*="display: inline-block"],
+            nav[style*="display:inline-block;"],
+            nav[style*="display: inline-block;"],
+            .nav-buttons[style*="display"],
+            .nav-buttons[style*="display:inline-block"],
+            .nav-buttons[style*="display: inline-block"],
+            .nav-buttons[style*="display:inline-block;"],
+            .nav-buttons[style*="display: inline-block;"],
+            .navigation-buttons[style*="display"],
+            .navigation-buttons[style*="display:inline-block"],
+            .navigation-buttons[style*="display: inline-block"],
+            .navigation-buttons[style*="display:inline-block;"],
+            .navigation-buttons[style*="display: inline-block;"],
+            .nav-button[style*="display"],
+            .nav-button[style*="display:inline-block"],
+            .nav-button[style*="display: inline-block"],
+            .nav-button[style*="display:inline-block;"],
+            .nav-button[style*="display: inline-block;"],
+            .enter-button[style*="display"],
+            .enter-button[style*="display:inline-block"],
+            .enter-button[style*="display: inline-block"],
+            .enter-button[style*="display:inline-block;"],
+            .enter-button[style*="display: inline-block;"],
+            .btn[style*="display"],
+            .btn[style*="display:inline-block"],
+            .btn[style*="display: inline-block"],
+            .btn[style*="display:inline-block;"],
+            .btn[style*="display: inline-block;"],
+            .button[style*="display"],
+            .button[style*="display:inline-block"],
+            .button[style*="display: inline-block"],
+            .button[style*="display:inline-block;"],
+            .button[style*="display: inline-block;"],
+            a[style*="display"][class*="nav"],
+            a[style*="display:inline-block"][class*="nav"],
+            a[style*="display: inline-block"][class*="nav"],
+            a[style*="display:inline-block;"][class*="nav"],
+            a[style*="display: inline-block;"][class*="nav"],
+            a[style*="display"][class*="button"],
+            a[style*="display:inline-block"][class*="button"],
+            a[style*="display: inline-block"][class*="button"],
+            a[style*="display:inline-block;"][class*="button"],
+            a[style*="display: inline-block;"][class*="button"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
+            }
+            
+            /* ============================================
+               1. PAGE SIZE & LAYOUT - 6x9 inches
+               Enhanced with multiple declarations for better browser support
+               ============================================ */
+            /* Standard CSS3 @page rule */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Alternative size declarations for better browser compatibility */
+            @page {
+                size: 152.4mm 228.6mm; /* 6" x 9" in millimeters */
+                margin: 19.05mm; /* 0.75" in millimeters */
+            }
+            
+            /* Webkit-specific page size */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* ============================================
+               2. COLOR PRINTING
+               ============================================ */
+            /* Preserve colors for printing - override browser defaults */
+            html, body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Universal reset: remove shadows/animations, preserve colors */
+            * {
+                box-shadow: none !important;
+                text-shadow: none !important;
+                animation: none !important;
+                transition: none !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Explicitly preserve colors for all text elements */
+            body,
+            p,
+            h1, h2, h3, h4, h5, h6,
+            li,
+            td, th,
+            span,
+            div,
+            a,
+            .author-bio-text,
+            .author-bio-image {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Body setup for 6x9 trade paperback */
+            body {
+                font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+                margin: 0;
+                padding: 0;
+                line-height: 1.5;
+                font-size: 11pt !important;
+                overflow: visible !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            
+            /* Body text at 11pt - standard for 6x9 trade paperback */
+            p, li {
+                font-size: 11pt !important;
+            }
+            
+            /* Typography */
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+            
+            h1 {
+                font-size: 22pt;
+                margin-bottom: 1rem;
+            }
+            
+            p {
+                font-size: 11pt !important;
+                page-break-inside: auto;
+                orphans: 2;
+                widows: 2;
+                margin-bottom: 0.5em;
+            }
+            
+            /* Links - no underline */
+            a {
+                text-decoration: none !important;
+            }
+            
+            /* ============================================
+               3. IMAGES PRINT IN COLOR
+               ============================================ */
+            /* Images print in color - explicitly remove any filters */
+            img,
+            img.author-bio-image {
+                filter: none !important;
+                -webkit-filter: none !important;
+                -moz-filter: none !important;
+                max-width: 100% !important;
+                height: auto !important;
+                page-break-inside: avoid;
+                display: block;
+                margin: 1rem auto;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            /* Author bio specific styles for print */
+            .author-bio-image {
+                max-width: 30% !important;
+                width: 30% !important;
+            }
+            
+            /* ============================================
+               4. CONTAINER LAYOUT FOR PRINT
+               ============================================ */
+            /* Container must have NO max-width for print - let it fill the page */
+            .container,
+            body > div {
+                width: 100% !important;
+                max-width: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+                overflow: visible !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Author Biography</h1>
+        
+        <img src="ansilo-boff-avatar-v2.jpg" alt="Ansilo Boff" class="author-bio-image"/>
+        
+        <div class="author-bio-text">
+            <p>Ansilo Boff grew up immersed in church life, where faith was not a weekend activity but the air he breathed. After years of ministry involvement, theological study, and spiritual experience … alongside a career in medicine and clinical research … he began to notice a growing tension between the God he was taught to fear and the Father Jesus revealed.</p>
+            
+            <p>The <b><i>'Rediscovering Jesus' Subverted Teachings and the Father's Love'</i></b> series is part of his ongoing work to re-examine Jesus' words with honesty, courage, and compassion, and to invite others into a faith freed from fear.</p>
+            
+            <p>He writes to the beat of his own drum, refusing to soften his tone when his views run counter to long-held traditions about life, love, and the universe. He values evidence as well as allowing the imagination to run free, and he is passionate about helping others gain a deeper sense of hope and optimism … and the confidence that comes from knowing they are unconditionally loved, accepted, and one with God. He loves sunsets and magnificent expressions of art, relishes a good lateral-thinking puzzle and the occasional murder mystery, and is currently ahead on points in the battle against carbs.</p>
+        </div>
+        
+        <div class="navigation-buttons">
+            <a href="bibliography.html" class="nav-button">Previous: Bibliography</a>
+            <a href="acknowledgments.html" class="nav-button">Next: Acknowledgments</a>
+        </div>
+    </div>
+</body>
+</html>
+

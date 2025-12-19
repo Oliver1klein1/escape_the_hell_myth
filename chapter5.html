@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape The Hell Myth: Chapter 5: The Day the World Ended - AD 70 and the 'Coming' of Christ</title>
+    <meta name="page-size" content="6in 9in">
+    <title>Escape The Hell Myth: Chapter 5: The Day the World Ended: AD 70 and the 'Coming' of Christ</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" media="screen">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
             color: var(--dark-text);
             line-height: 1.8;
             background-color: white;
-            max-width: 1200px;
+            max-width: 100% !important;
             margin: 0 auto;
             padding: 2rem;
             text-align: justify;
@@ -229,8 +230,8 @@
         }
         
         .prophecy-table th {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            background-color: #E6F3FF;
+            color: var(--primary-color);
             padding: 1rem 1.5rem;
             text-align: center;
             font-weight: 700;
@@ -264,6 +265,12 @@
         
         .prophecy-table em {
             color: var(--secondary-color);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        .prophecy-table strong em {
+            color: var(--primary-color);
             font-style: normal;
             font-weight: 600;
         }
@@ -307,29 +314,189 @@
         /* Print-specific styles */
         /* Print-specific styles */
         /* Print-specific styles */
-        /* Print-specific styles - FULL COLOR */
+        /* Print-specific styles - BLACK AND WHITE */
         @media print {
             /* ============================================
-               1. PAGE SIZE & LAYOUT - 6x9 inches
+               0. UNIVERSAL NAVIGATION HIDING - HIGHEST PRIORITY
+               Must be FIRST to override all inline styles
                ============================================ */
-            @page {
-                size: 6in 9in;
-                margin: 0.75in;
+            /* Universal rule to hide ALL navigation elements - placed FIRST for priority */
+            *[class*="nav"],
+            *[class*="button"]:not([class*="content"]):not([class*="text"]),
+            *[class*="menu"],
+            *[class*="breadcrumb"],
+            header,
+            footer,
+            nav,
+            .navbar,
+            .nav,
+            .nav-bar,
+            .site-header,
+            .site-footer,
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            .nav-buttons,
+            .pagination,
+            .breadcrumbs,
+            .breadcrumb,
+            .toc-controls,
+            .btn,
+            .button,
+            .icon-button,
+            .back-to-top,
+            .menu,
+            .enter-button {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Override inline display:inline-block styles with attribute selectors */
+            nav[style*="display"],
+            nav[style*="display:inline-block"],
+            nav[style*="display: inline-block"],
+            nav[style*="display:inline-block;"],
+            nav[style*="display: inline-block;"],
+            .nav-buttons[style*="display"],
+            .nav-buttons[style*="display:inline-block"],
+            .nav-buttons[style*="display: inline-block"],
+            .nav-buttons[style*="display:inline-block;"],
+            .nav-buttons[style*="display: inline-block;"],
+            .navigation-buttons[style*="display"],
+            .navigation-buttons[style*="display:inline-block"],
+            .navigation-buttons[style*="display: inline-block"],
+            .navigation-buttons[style*="display:inline-block;"],
+            .navigation-buttons[style*="display: inline-block;"],
+            .nav-button[style*="display"],
+            .nav-button[style*="display:inline-block"],
+            .nav-button[style*="display: inline-block"],
+            .nav-button[style*="display:inline-block;"],
+            .nav-button[style*="display: inline-block;"],
+            .enter-button[style*="display"],
+            .enter-button[style*="display:inline-block"],
+            .enter-button[style*="display: inline-block"],
+            .enter-button[style*="display:inline-block;"],
+            .enter-button[style*="display: inline-block;"],
+            .btn[style*="display"],
+            .btn[style*="display:inline-block"],
+            .btn[style*="display: inline-block"],
+            .btn[style*="display:inline-block;"],
+            .btn[style*="display: inline-block;"],
+            .button[style*="display"],
+            .button[style*="display:inline-block"],
+            .button[style*="display: inline-block"],
+            .button[style*="display:inline-block;"],
+            .button[style*="display: inline-block;"],
+            a[style*="display"][class*="nav"],
+            a[style*="display:inline-block"][class*="nav"],
+            a[style*="display: inline-block"][class*="nav"],
+            a[style*="display:inline-block;"][class*="nav"],
+            a[style*="display: inline-block;"][class*="nav"],
+            a[style*="display"][class*="button"],
+            a[style*="display:inline-block"][class*="button"],
+            a[style*="display: inline-block"][class*="button"],
+            a[style*="display:inline-block;"][class*="button"],
+            a[style*="display: inline-block;"][class*="button"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
             }
             
             /* ============================================
-               2. FULL COLOR PRINTING - PRESERVE ORIGINAL COLORS
+               1. PAGE SIZE & LAYOUT - 6x9 inches
+               Enhanced with multiple declarations for better browser support
                ============================================ */
-            /* Minimal universal reset: remove shadows/animations only */
+            /* Standard CSS3 @page rule */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Alternative size declarations for better browser compatibility */
+            @page {
+                size: 152.4mm 228.6mm; /* 6" x 9" in millimeters */
+                margin: 19.05mm; /* 0.75" in millimeters */
+            }
+            
+            /* Webkit-specific page size */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* ============================================
+               2. BLACK AND WHITE PRINTING - GRAYSCALE
+               ============================================ */
+            /* Force grayscale/black and white printing */
+            html, body {
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
+            }
+            
+            /* Universal reset: remove shadows/animations, force black text */
             * {
                 box-shadow: none !important;
                 text-shadow: none !important;
                 animation: none !important;
                 transition: none !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color-adjust: exact !important;
+                -webkit-print-color-adjust: economy !important;
+                print-color-adjust: economy !important;
+                color-adjust: economy !important;
             }
+            
+            /* Force all text to black */
+            body,
+            p,
+            h1, h2, h3, h4, h5, h6,
+            li,
+            td, th,
+            span,
+            div,
+            a {
+                color: #000000 !important;
+                background-color: transparent !important;
+            }
+            
+            /* Force all backgrounds to white */
+            body {
+                background-color: #ffffff !important;
+            }
+            /* Container should fill printable area */
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
             
             /* Body setup for 6x9 trade paperback */
             body {
@@ -339,35 +506,51 @@
                 line-height: 1.5;
                 font-size: 11pt !important;
                 overflow: visible !important;
-                max-width: none !important;
+                max-width: 100% !important;
                 width: 100% !important;
+                color: #000000 !important;
+                background-color: #ffffff !important;
             }
+            /* Container should fill printable area */
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
             
             /* Body text at 11pt - standard for 6x9 trade paperback */
             p, li {
                 font-size: 11pt !important;
+                color: #000000 !important;
             }
             
             /* Typography */
             h1, h2, h3, h4, h5, h6 {
                 page-break-after: avoid;
                 page-break-inside: avoid;
+                color: #000000 !important;
             }
             
             h1, .chapter-title {
                 font-size: 22pt;
                 margin-bottom: 1rem;
+                color: #000000 !important;
             }
             
             h2 {
                 font-size: 18pt;
                 margin-top: 1.5rem;
                 margin-bottom: 0.5rem;
+                color: #000000 !important;
             }
             
             .callout-title {
                 margin-bottom: 0.5rem !important;
                 page-break-after: avoid;
+                color: #000000 !important;
             }
             
             p {
@@ -376,27 +559,32 @@
                 orphans: 2;
                 widows: 2;
                 margin-bottom: 0.5em;
+                color: #000000 !important;
             }
             
             li {
                 orphans: 2;
                 widows: 2;
                 font-size: 11pt !important;
+                color: #000000 !important;
             }
             
             th, td {
                 font-size: 10pt !important;
+                color: #000000 !important;
+                border-color: #000000 !important;
             }
             
-            /* Links - keep text readable but underline for clarity */
+            /* Links - black text, no underline */
             a {
                 text-decoration: none !important;
+                color: #000000 !important;
             }
             
             /* ============================================
-               3. IMAGES PRINT IN FULL COLOR
+               3. IMAGES PRINT IN GRAYSCALE
                ============================================ */
-            /* Images print in their original colors - NO grayscale filter */
+            /* Images print in grayscale for black and white */
             img,
             img.chapter-image,
             img.book-cover,
@@ -405,9 +593,9 @@
             img.cover-img,
             img.logo-image,
             img.logo-image-top {
-                filter: none !important;
-                -webkit-filter: none !important;
-                -moz-filter: none !important;
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
                 max-width: 100% !important;
                 height: auto !important;
                 page-break-inside: avoid;
@@ -435,6 +623,7 @@
                 page-break-inside: auto;
                 border-collapse: collapse;
                 width: 100%;
+                border-color: #000000 !important;
             }
             
             tr {
@@ -444,13 +633,17 @@
             th, td {
                 padding: 0.5rem;
                 text-align: left;
+                border: 1px solid #000000 !important;
+                color: #000000 !important;
             }
             
-            /* Content boxes */
+            /* Content boxes - black borders and text */
             .highlight,
             .callout {
                 page-break-inside: auto;
                 margin: 1rem 0;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             .book-section,
@@ -461,21 +654,28 @@
             
             .info-box {
                 page-break-inside: auto;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             .info-box-title {
                 margin-bottom: 0.75rem !important;
                 page-break-after: avoid;
+                color: #000000 !important;
             }
             
             .callout-quote {
                 margin: 1rem 0 !important;
                 padding: 1rem !important;
                 page-break-inside: avoid;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             .bible-quote {
                 page-break-inside: avoid;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             ul, ol {
@@ -483,84 +683,7 @@
             }
             
             /* ============================================
-               5. HIDE NAVIGATION & UI CHROME IN PRINT
-               ============================================ */
-            /* Hide standard navigation elements */
-            header,
-            footer,
-            nav,
-            .navbar,
-            .nav,
-            .nav-bar,
-            .site-header,
-            .site-footer,
-            .navigation,
-            .nav-link,
-            .navigation-buttons,
-            .nav-button,
-            .pagination,
-            .breadcrumbs,
-            .breadcrumb,
-            .toc-controls,
-            .nav-buttons,
-            .btn,
-            .button,
-            .icon-button,
-            .back-to-top,
-            .menu {
-                display: none !important;
-                visibility: hidden !important;
-                opacity: 0 !important;
-                height: 0 !important;
-                width: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow: hidden !important;
-            }
-            
-            /* Override inline display:inline-block styles with attribute selectors */
-            nav[style*="display:inline-block"],
-            nav[style*="display: inline-block"],
-            .nav-buttons[style*="display:inline-block"],
-            .nav-buttons[style*="display: inline-block"],
-            .navigation-buttons[style*="display:inline-block"],
-            .navigation-buttons[style*="display: inline-block"],
-            .nav-button[style*="display:inline-block"],
-            .nav-button[style*="display: inline-block"],
-            .enter-button[style*="display:inline-block"],
-            .enter-button[style*="display: inline-block"],
-            .btn[style*="display:inline-block"],
-            .btn[style*="display: inline-block"],
-            .button[style*="display:inline-block"],
-            .button[style*="display: inline-block"],
-            a[style*="display:inline-block"][class*="nav"],
-            a[style*="display: inline-block"][class*="nav"],
-            a[style*="display:inline-block"][class*="button"],
-            a[style*="display: inline-block"][class*="button"] {
-                display: none !important;
-                visibility: hidden !important;
-            }
-            
-            /* Hide any element with navigation-related classes */
-            [class*="nav"],
-            [class*="menu"],
-            [class*="breadcrumb"] {
-                display: none !important;
-            }
-            
-            /* Hide button classes (but preserve content/text classes) */
-            [class*="button"]:not([class*="content"]):not([class*="text"]) {
-                display: none !important;
-            }
-            
-            /* Hide elements that shouldn't print */
-            .no-print,
-            .screen-only {
-                display: none !important;
-            }
-            
-            /* ============================================
-               6. CONTAINER LAYOUT FOR PRINT
+               5. CONTAINER LAYOUT FOR PRINT
                ============================================ */
             /* Container must have NO max-width for print - let it fill the page */
             .container,
@@ -579,7 +702,7 @@
 <body>
     <div class="container">
         <div class="chapter">
-            <h1 class="chapter-title">Chapter 5: The Day the World Ended - AD 70 and the 'Coming' of Christ</h1>
+            <h1 class="chapter-title">Chapter 5: The Day the World Ended: AD 70 and the 'Coming' of Christ</h1>
             <p class="chapter-quote">"This generation will not pass away until all these things happen." - Matthew 24:34</p>
             
             <p class="drop-cap">In the previous chapter, we established that the troubling verses about eternal fire and judgment refer to the end of the Jewish age rather than eternity.</p>
@@ -590,7 +713,7 @@
             
             <p>Let's examine the historical evidence that proves these prophecies came to pass.</p>
 
-            <h2>1. The Day of the Lord and the Coming on the Clouds</h2>
+            <h2>1. The "Day of the Lord" and the "Coming on the Clouds"</h2>
             
             <p>Whenever prophets announced a divine judgment, whether on Edom, Egypt or Babylon, they described <strong>cosmic fireworks</strong>.</p>
             
@@ -627,10 +750,10 @@
             <p>In the first case, the <strong>Babylonians defeated Edom</strong>, often referred to as Esau, from whom they descended, around the 6th century BCE. However, God takes the credit for Edom's defeat and destruction.</p>
             
             <div class="callout-quote">
-                "But Esau I [God] have hated, and I [God] have turned his mountains into a wasteland." (Malachi 1:3)
+                "But Esau I [Yahweh] have hated, and I [Yahweh] have turned his mountains into a wasteland." (Malachi 1:3)
             </div>
             
-            <p>Did God turn the mountains of Edom into a wasteland, or did the Babylonians? Clearly the <strong>Babylonian armies were God's instruments</strong> in this judgment.</p>
+            <p>Did Yahweh turn the mountains of Edom into a wasteland, or did the Babylonians? The <strong>Babylonian armies appear to have been "Yahweh's instruments"</strong> in this judgment.</p>
             
             <p>In the case of Egypt, there's a curious additional piece of prophecy recorded in Scripture concerning its destruction.</p>
             
@@ -638,13 +761,13 @@
                 "See, the LORD rides <strong>on a swift cloud and is coming to Egypt</strong>. The idols of Egypt tremble before him, and the hearts of the Egyptians melt within them." (Isaiah 19:1)
             </div>
             
-            <p>God is said to <strong>"ride on a cloud"</strong> and to <strong>"come"</strong> to Egypt. The next chapter in Isaiah records how the <strong>Assyrians destroyed Egypt</strong> (around 671-663 BCE). But we've just read how God is given the credit for Egypt's destruction. <strong>See the pattern?</strong></p>
+            <p>Yahweh is said to <strong>"ride on a cloud"</strong> and to <strong>"come"</strong> to Egypt. The next chapter in Isaiah records how the <strong>Assyrians destroyed Egypt</strong> (around 671-663 BCE). But we've just read how Yahweh is given the credit for Egypt's destruction. <strong>See the pattern?</strong></p>
             
             <p>Could the <strong>"cloud"</strong> be a reference to a swift, efficient, and effective army (in this case, the Assyrians) that God used to accomplish His purposes? God certainly didn't literally ride a physical cloud into Egypt.</p>
             
             <img src="coming_on_clouds.jpg" alt="Coming on clouds - divine judgment through armies" class="chapter-image">
             
-            <p>It seems pretty clear that <strong>"coming on clouds"</strong> is symbolic language for divine judgment through earthly armies, rather than a literal astronomical event.</p>
+            <p>It seems pretty clear that <strong>"coming on clouds"</strong> is symbolic language for judgment through earthly armies, rather than a literal astronomical event.</p>
             
             <p>The Jerusalem prophecy mentioned above was <strong>fulfilled when it fell in the period 606 to 586 BC</strong>.</p>
             
@@ -1025,6 +1148,8 @@
             <p>This chapter has demonstrated that those scary-sounding words about "stars falling from the sky," "coming in the clouds in judgment," and other apocalyptic destruction terms were used metaphorically for specific historical events, including the destruction of the temple (and the associated sacrificial system) in AD 70. We've taken those words and darkened them with literal meaning, trapping ourselves in fear of an endless future punishment that was never intended.</p>
             
             <p>The historical evidence is clear: <strong>Jesus' prophecies about the end of the age were fulfilled in AD 70</strong>, exactly when He predicted. The temple fell, the Jewish age ended, and a new era of grace began, initiated by the <strong>RADICALLY DIFFERENT GOD</strong> Jesus revealed when he called him 'Father.'</p>
+            
+            <img src="flowers_poinsettias.jpg" alt="Decorative flowers" class="chapter-image" style="width: 60%; max-width: 500px;">
             
             <div class="navigation-buttons">
                 <a href="chapter4.html" class="nav-button">Previous</a>

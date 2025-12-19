@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Comprehensive EPUB Creator for Gumroad and Amazon KDP
 Creates both Gumroad and KDP-compliant EPUB files with all metadata and styling preserved.
 """
 
 import os
+import sys
 import json
 import shutil
 import zipfile
@@ -14,6 +16,16 @@ import uuid
 from pathlib import Path
 from datetime import datetime
 from bs4 import BeautifulSoup
+
+# Set UTF-8 encoding for Windows console
+if sys.platform == 'win32':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except AttributeError:
+        # Python < 3.7
+        import codecs
+        sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+        sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
 
 # Configuration
 METADATA_FILE = 'book_metadata.json'
@@ -34,10 +46,11 @@ FILES_TO_PROCESS = [
     "part4.html",
     "chapter6.html", "chapter7.html", "chapter8.html",
     "conclusion.html",
-    "other-books.html",
     "appendix.html",
     "bibliography.html",
-    "acknowledgments.html"
+    "other-books.html",
+    "acknowledgments.html",
+    "author-bio.html"
 ]
 
 CORRECT_SPINE_ORDER = [
@@ -59,10 +72,11 @@ CORRECT_SPINE_ORDER = [
     "chapter7",
     "chapter8",
     "conclusion",
-    "other-books",
     "appendix",
     "bibliography",
-    "acknowledgments"
+    "other-books",
+    "acknowledgments",
+    "author-bio"
 ]
 
 def load_metadata():
@@ -167,13 +181,73 @@ def convert_html_to_xhtml(html_file_path, output_dir, kdp_mode=False):
             link['href'] = href.replace('.html', '.xhtml')
     
     # Extract any inline styles from the original HTML
+    # Add EPUB-specific CSS fixes for container overflow and text wrapping (always added)
+    epub_fixes = '''
+/* EPUB-specific fixes for container overflow and text wrapping */
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.container,
+.copyright,
+.dedication,
+.table-of-contents,
+.acknowledgments {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Ensure text wraps properly */
+p, div, span, li, td, th {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    max-width: 100% !important;
+}
+
+/* Preserve book cover image sizes in "Books By Ansilo Boff" section */
+.book-cover {
+    width: 40% !important;
+    max-width: 40% !important;
+}
+
+.book-cover img {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Series images (first in each series) should remain 100% width */
+.series-image-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+'''
+    
     style_content = ""
     style_tag = soup.find('style')
     if style_tag:
         # Get the style content and ensure it has type attribute
         style_text = style_tag.string or ""
         if style_text:
-            style_content = f'<style type="text/css">{style_text}</style>'
+            style_content = f'<style type="text/css">{epub_fixes}{style_text}</style>'
+        else:
+            style_content = f'<style type="text/css">{epub_fixes}</style>'
+    else:
+        # No style tag, but we still need the EPUB fixes
+        style_content = f'<style type="text/css">{epub_fixes}</style>'
     
     # Determine body class
     body_classes = []

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="page-size" content="6in 9in">
     <title>Escape The Hell Myth: Chapter 8 - The Wounds We Inherit: How Hell Belief Damages Everything</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" media="screen">
@@ -23,7 +24,7 @@
             color: var(--dark-text);
             line-height: 1.8;
             background-color: white;
-            max-width: 1200px;
+            max-width: 100% !important;
             margin: 0 auto;
             padding: 2rem;
             text-align: justify;
@@ -182,29 +183,189 @@
         /* Print-specific styles */
         /* Print-specific styles */
         /* Print-specific styles */
-        /* Print-specific styles - FULL COLOR */
+        /* Print-specific styles - BLACK AND WHITE */
         @media print {
             /* ============================================
-               1. PAGE SIZE & LAYOUT - 6x9 inches
+               0. UNIVERSAL NAVIGATION HIDING - HIGHEST PRIORITY
+               Must be FIRST to override all inline styles
                ============================================ */
-            @page {
-                size: 6in 9in;
-                margin: 0.75in;
+            /* Universal rule to hide ALL navigation elements - placed FIRST for priority */
+            *[class*="nav"],
+            *[class*="button"]:not([class*="content"]):not([class*="text"]),
+            *[class*="menu"],
+            *[class*="breadcrumb"],
+            header,
+            footer,
+            nav,
+            .navbar,
+            .nav,
+            .nav-bar,
+            .site-header,
+            .site-footer,
+            .navigation,
+            .nav-link,
+            .navigation-buttons,
+            .nav-button,
+            .nav-buttons,
+            .pagination,
+            .breadcrumbs,
+            .breadcrumb,
+            .toc-controls,
+            .btn,
+            .button,
+            .icon-button,
+            .back-to-top,
+            .menu,
+            .enter-button {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Override inline display:inline-block styles with attribute selectors */
+            nav[style*="display"],
+            nav[style*="display:inline-block"],
+            nav[style*="display: inline-block"],
+            nav[style*="display:inline-block;"],
+            nav[style*="display: inline-block;"],
+            .nav-buttons[style*="display"],
+            .nav-buttons[style*="display:inline-block"],
+            .nav-buttons[style*="display: inline-block"],
+            .nav-buttons[style*="display:inline-block;"],
+            .nav-buttons[style*="display: inline-block;"],
+            .navigation-buttons[style*="display"],
+            .navigation-buttons[style*="display:inline-block"],
+            .navigation-buttons[style*="display: inline-block"],
+            .navigation-buttons[style*="display:inline-block;"],
+            .navigation-buttons[style*="display: inline-block;"],
+            .nav-button[style*="display"],
+            .nav-button[style*="display:inline-block"],
+            .nav-button[style*="display: inline-block"],
+            .nav-button[style*="display:inline-block;"],
+            .nav-button[style*="display: inline-block;"],
+            .enter-button[style*="display"],
+            .enter-button[style*="display:inline-block"],
+            .enter-button[style*="display: inline-block"],
+            .enter-button[style*="display:inline-block;"],
+            .enter-button[style*="display: inline-block;"],
+            .btn[style*="display"],
+            .btn[style*="display:inline-block"],
+            .btn[style*="display: inline-block"],
+            .btn[style*="display:inline-block;"],
+            .btn[style*="display: inline-block;"],
+            .button[style*="display"],
+            .button[style*="display:inline-block"],
+            .button[style*="display: inline-block"],
+            .button[style*="display:inline-block;"],
+            .button[style*="display: inline-block;"],
+            a[style*="display"][class*="nav"],
+            a[style*="display:inline-block"][class*="nav"],
+            a[style*="display: inline-block"][class*="nav"],
+            a[style*="display:inline-block;"][class*="nav"],
+            a[style*="display: inline-block;"][class*="nav"],
+            a[style*="display"][class*="button"],
+            a[style*="display:inline-block"][class*="button"],
+            a[style*="display: inline-block"][class*="button"],
+            a[style*="display:inline-block;"][class*="button"],
+            a[style*="display: inline-block;"][class*="button"] {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                overflow: hidden !important;
+                position: absolute !important;
+                left: -9999px !important;
+            }
+            
+            /* Hide elements that shouldn't print */
+            .no-print,
+            .screen-only {
+                display: none !important;
             }
             
             /* ============================================
-               2. FULL COLOR PRINTING - PRESERVE ORIGINAL COLORS
+               1. PAGE SIZE & LAYOUT - 6x9 inches
+               Enhanced with multiple declarations for better browser support
                ============================================ */
-            /* Minimal universal reset: remove shadows/animations only */
+            /* Standard CSS3 @page rule */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* Alternative size declarations for better browser compatibility */
+            @page {
+                size: 152.4mm 228.6mm; /* 6" x 9" in millimeters */
+                margin: 19.05mm; /* 0.75" in millimeters */
+            }
+            
+            /* Webkit-specific page size */
+            @page {
+                size: 6in 9in;
+                margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            /* ============================================
+               2. BLACK AND WHITE PRINTING - GRAYSCALE
+               ============================================ */
+            /* Force grayscale/black and white printing */
+            html, body {
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
+            }
+            
+            /* Universal reset: remove shadows/animations, force black text */
             * {
                 box-shadow: none !important;
                 text-shadow: none !important;
                 animation: none !important;
                 transition: none !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color-adjust: exact !important;
+                -webkit-print-color-adjust: economy !important;
+                print-color-adjust: economy !important;
+                color-adjust: economy !important;
             }
+            
+            /* Force all text to black */
+            body,
+            p,
+            h1, h2, h3, h4, h5, h6,
+            li,
+            td, th,
+            span,
+            div,
+            a {
+                color: #000000 !important;
+                background-color: transparent !important;
+            }
+            
+            /* Force all backgrounds to white */
+            body {
+                background-color: #ffffff !important;
+            }
+            /* Container should fill printable area */
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
             
             /* Body setup for 6x9 trade paperback */
             body {
@@ -214,12 +375,29 @@
                 line-height: 1.5;
                 font-size: 11pt !important;
                 overflow: visible !important;
-                max-width: none !important;
+                max-width: 100% !important;
                 width: 100% !important;
+                color: #000000 !important;
+                background-color: #ffffff !important;
+            }
+            /* Container should fill printable area */
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            
+            /* Body text at 11pt - standard for 6x9 trade paperback - ENFORCE CONSISTENT SIZE */
+            p, li, div, span {
+                font-size: 11pt !important;
+                color: #000000 !important;
             }
             
-            /* Body text at 11pt - standard for 6x9 trade paperback */
-            p, li {
+            /* Ensure all text elements use consistent font size */
+            .container, .chapter {
                 font-size: 11pt !important;
             }
             
@@ -227,22 +405,26 @@
             h1, h2, h3, h4, h5, h6 {
                 page-break-after: avoid;
                 page-break-inside: avoid;
+                color: #000000 !important;
             }
             
             h1, .chapter-title {
                 font-size: 22pt;
                 margin-bottom: 1rem;
+                color: #000000 !important;
             }
             
             h2 {
                 font-size: 18pt;
                 margin-top: 1.5rem;
                 margin-bottom: 0.5rem;
+                color: #000000 !important;
             }
             
             .callout-title {
                 margin-bottom: 0.5rem !important;
                 page-break-after: avoid;
+                color: #000000 !important;
             }
             
             p {
@@ -251,27 +433,32 @@
                 orphans: 2;
                 widows: 2;
                 margin-bottom: 0.5em;
+                color: #000000 !important;
             }
             
             li {
                 orphans: 2;
                 widows: 2;
                 font-size: 11pt !important;
+                color: #000000 !important;
             }
             
             th, td {
                 font-size: 10pt !important;
+                color: #000000 !important;
+                border-color: #000000 !important;
             }
             
-            /* Links - keep text readable but underline for clarity */
+            /* Links - black text, no underline */
             a {
                 text-decoration: none !important;
+                color: #000000 !important;
             }
             
             /* ============================================
-               3. IMAGES PRINT IN FULL COLOR
+               3. IMAGES PRINT IN GRAYSCALE
                ============================================ */
-            /* Images print in their original colors - NO grayscale filter */
+            /* Images print in grayscale for black and white */
             img,
             img.chapter-image,
             img.book-cover,
@@ -280,9 +467,9 @@
             img.cover-img,
             img.logo-image,
             img.logo-image-top {
-                filter: none !important;
-                -webkit-filter: none !important;
-                -moz-filter: none !important;
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
                 max-width: 100% !important;
                 height: auto !important;
                 page-break-inside: avoid;
@@ -310,6 +497,7 @@
                 page-break-inside: auto;
                 border-collapse: collapse;
                 width: 100%;
+                border-color: #000000 !important;
             }
             
             tr {
@@ -319,13 +507,17 @@
             th, td {
                 padding: 0.5rem;
                 text-align: left;
+                border: 1px solid #000000 !important;
+                color: #000000 !important;
             }
             
-            /* Content boxes */
+            /* Content boxes - black borders and text */
             .highlight,
             .callout {
                 page-break-inside: auto;
                 margin: 1rem 0;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             .book-section,
@@ -336,21 +528,28 @@
             
             .info-box {
                 page-break-inside: auto;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             .info-box-title {
                 margin-bottom: 0.75rem !important;
                 page-break-after: avoid;
+                color: #000000 !important;
             }
             
             .callout-quote {
                 margin: 1rem 0 !important;
                 padding: 1rem !important;
                 page-break-inside: avoid;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             .bible-quote {
                 page-break-inside: avoid;
+                border-color: #000000 !important;
+                color: #000000 !important;
             }
             
             ul, ol {
@@ -358,84 +557,7 @@
             }
             
             /* ============================================
-               5. HIDE NAVIGATION & UI CHROME IN PRINT
-               ============================================ */
-            /* Hide standard navigation elements */
-            header,
-            footer,
-            nav,
-            .navbar,
-            .nav,
-            .nav-bar,
-            .site-header,
-            .site-footer,
-            .navigation,
-            .nav-link,
-            .navigation-buttons,
-            .nav-button,
-            .pagination,
-            .breadcrumbs,
-            .breadcrumb,
-            .toc-controls,
-            .nav-buttons,
-            .btn,
-            .button,
-            .icon-button,
-            .back-to-top,
-            .menu {
-                display: none !important;
-                visibility: hidden !important;
-                opacity: 0 !important;
-                height: 0 !important;
-                width: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                overflow: hidden !important;
-            }
-            
-            /* Override inline display:inline-block styles with attribute selectors */
-            nav[style*="display:inline-block"],
-            nav[style*="display: inline-block"],
-            .nav-buttons[style*="display:inline-block"],
-            .nav-buttons[style*="display: inline-block"],
-            .navigation-buttons[style*="display:inline-block"],
-            .navigation-buttons[style*="display: inline-block"],
-            .nav-button[style*="display:inline-block"],
-            .nav-button[style*="display: inline-block"],
-            .enter-button[style*="display:inline-block"],
-            .enter-button[style*="display: inline-block"],
-            .btn[style*="display:inline-block"],
-            .btn[style*="display: inline-block"],
-            .button[style*="display:inline-block"],
-            .button[style*="display: inline-block"],
-            a[style*="display:inline-block"][class*="nav"],
-            a[style*="display: inline-block"][class*="nav"],
-            a[style*="display:inline-block"][class*="button"],
-            a[style*="display: inline-block"][class*="button"] {
-                display: none !important;
-                visibility: hidden !important;
-            }
-            
-            /* Hide any element with navigation-related classes */
-            [class*="nav"],
-            [class*="menu"],
-            [class*="breadcrumb"] {
-                display: none !important;
-            }
-            
-            /* Hide button classes (but preserve content/text classes) */
-            [class*="button"]:not([class*="content"]):not([class*="text"]) {
-                display: none !important;
-            }
-            
-            /* Hide elements that shouldn't print */
-            .no-print,
-            .screen-only {
-                display: none !important;
-            }
-            
-            /* ============================================
-               6. CONTAINER LAYOUT FOR PRINT
+               5. CONTAINER LAYOUT FOR PRINT
                ============================================ */
             /* Container must have NO max-width for print - let it fill the page */
             .container,
@@ -463,7 +585,7 @@
             
             <p>I honestly don't know how my dad coped with her funeral and the many other funerals he had to lead as a preacher where there was no doubt that the person being buried had been evil. He once had to bury a convicted criminal killed in the act of attempting to commit yet another murder.</p>
             
-            <img src="funeral32.jpg" alt="Funeral" class="chapter-image">
+            <img src="funeral32.jpg" alt="Funeral" class="chapter-image" style="max-width: 100%; max-height: 7in; width: auto; height: auto; object-fit: contain; page-break-inside: avoid; display: block; margin: 1rem auto;">
             
             <p>We didn't discuss this often. But when we did, he would shrug and say matter-of-factly, <em>"There's no point focusing on trying to say something good about the dead person. Everyone in that room knows the kind of life that person led and where he's headed. So I just preach the gospel."</em></p>
             
@@ -471,7 +593,7 @@
                 "Besides," he would add, "we have no way of knowing what may have happened in those last few seconds before death. That gangster may have given his life to the Lord. Who knows?"
             </div>
             
-            <img src="gangster.jpg" alt="Gangster" class="chapter-image">
+            <img src="gangster.jpg" alt="Gangster" class="chapter-image" style="max-width: 100%; max-height: 7in; width: auto; height: auto; object-fit: contain; page-break-inside: avoid; display: block; margin: 1rem auto;">
             
             <p>Then he would sit back in silence and deep thought, probably contemplating the expression on the gangster's mom's face at the graveside.</p>
             
@@ -553,7 +675,7 @@
             
             <p><em>"I agree,"</em> she said. <em>"I suspect that much of the alcoholism, depression, and mental problems in the world are directly due to the weird stuff preached about God. It's no wonder so many people don't want to know the Father of Jesus. They've been confusing him with Yahweh this whole time! Yahweh and Paul probably enjoy more airtime from pulpits than the words Jesus spoke, I would suggest."</em></p>
             
-            <img src="alcoholic24.jpg" alt="Alcoholism and mental health" class="chapter-image">
+            <img src="alcoholic24.jpg" alt="Alcoholism and mental health" class="chapter-image" style="max-width: 100%; max-height: 7in; width: auto; height: auto; object-fit: contain; page-break-inside: avoid; display: block; margin: 1rem auto;">
             
             <p><em>"I think you've hit the nail on the head,"</em> I said, grabbing my notepad. <em>"I'm going to mention that in the book too."</em></p>
             
@@ -589,7 +711,7 @@
             
             <p><em>"A restaurant scene in Venice."</em> She handed me a five-by-seven-inch photograph. <em>"Here's the original picture. What do you think?"</em></p>
             
-            <img src="painting_venice.jpg" alt="Restaurant scene in Venice painting" class="chapter-image">
+            <img src="painting_venice.jpg" alt="Restaurant scene in Venice painting" class="chapter-image" style="max-width: 100%; max-height: 7in; width: auto; height: auto; object-fit: contain; page-break-inside: avoid; display: block; margin: 1rem auto;">
             
             <p>I looked from the photo to her work of art. <em>"I like the pastels you're using,"</em> I said. <em>"I think that purple color in the photograph is too dark for Venice. Your brighter view of it is so much more appealing."</em> I recalled our last trip to Italy. <em>"And your painting looks more like what the city is really like."</em></p>
             
@@ -622,6 +744,8 @@
             <p>The psychological liberation described in this chapter isn't just a side benefit of correct theology: it's <strong>evidence that we're finally seeing truth</strong>.</p>
             
             <p>When your beliefs align with reality, <strong>your heart stops fighting itself</strong>.</p>
+            
+            <img src="flowers_tulips.jpg" alt="Decorative flowers" class="chapter-image" style="width: 65%; max-width: 65%; max-height: 7in; height: auto; object-fit: contain; page-break-inside: avoid; display: block; margin: 1rem auto;">
             
             <div class="navigation-buttons">
                 <a href="chapter7.html" class="nav-button">Previous: Chapter 7</a>

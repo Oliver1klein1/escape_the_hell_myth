@@ -90,7 +90,8 @@
             margin: 3rem 0;
             padding: 2rem 0;
             border-bottom: 1px solid var(--secondary-color);
-            page-break-inside: auto;`n                font-size: 11.5pt !important;
+            page-break-inside: auto;
+            font-size: 11.5pt !important;
             page-break-before: auto;
             page-break-after: auto;
         }
@@ -121,6 +122,9 @@
         
         .book-description {
             flex: 1;
+            min-width: 0; /* Allow flex item to shrink below content size */
+            overflow-wrap: break-word; /* Break long words if needed */
+            word-wrap: break-word; /* Legacy support */
         }
         
         .book-title {
@@ -135,6 +139,9 @@
         .book-text {
             font-size: 1rem;
             line-height: 1.7;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            max-width: 100%;
         }
         
         .navigation-buttons {
@@ -224,6 +231,20 @@
             color: var(--secondary-color);
             font-style: italic;
             margin-bottom: 1rem;
+        }
+        
+        /* EPUB-specific fixes for text wrapping */
+        @media all {
+            .book-description {
+                min-width: 0 !important;
+                overflow-wrap: break-word !important;
+                word-wrap: break-word !important;
+            }
+            .book-text p {
+                overflow-wrap: break-word !important;
+                word-wrap: break-word !important;
+                max-width: 100% !important;
+            }
         }
         
         @media (max-width: 768px) {

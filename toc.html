@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape The Hell Myth: Table of Contents</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" media="screen">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Escape The Hell Myth: Table of Contents</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" media="screen" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" media="screen" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
         :root {
             --primary-color: #2a4365;
             --secondary-color: #7f9cf5;
@@ -22,7 +23,7 @@
             color: var(--dark-text);
             line-height: 1.8;
             background-color: white;
-            max-width: 1200px;
+            max-width: 100% !important;
             margin: 0 auto;
             padding: 0;
         }
@@ -39,6 +40,12 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 0.5rem;
+            margin: 1em auto;
+            max-width: 950px;
+            width: 100%;
         }
         
         .toc-title {
@@ -84,15 +91,33 @@
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--secondary-color);
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
         
         .part-title a {
             color: var(--primary-color);
             text-decoration: none;
+            flex: 1;
+            display: inline-block;
         }
         
         .part-title a:hover {
             color: var(--secondary-color);
+        }
+        
+        .part-title span {
+            flex-shrink: 0;
+            margin-left: 1em;
+            text-align: right;
+            display: inline-block;
+        }
+        
+        /* Center "Reference Materials" - it has no link */
+        .part-title.reference-title {
+            justify-content: center !important;
         }
         
         .toc-item {
@@ -173,20 +198,90 @@
             @page {
                 size: 6in 9in;
                 margin: 0.75in;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
             
             /* ============================================
-               2. FULL COLOR PRINTING - PRESERVE ORIGINAL COLORS
+               2. BLACK AND WHITE PRINTING - GRAYSCALE
                ============================================ */
-            /* Minimal universal reset: remove shadows/animations only */
+            /* Force grayscale/black and white printing */
+            html, body {
+                filter: grayscale(100%) !important;
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
+            }
+            
+            /* Universal reset: remove shadows/animations, force black text */
             * {
                 box-shadow: none !important;
                 text-shadow: none !important;
                 animation: none !important;
                 transition: none !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color-adjust: exact !important;
+                -webkit-print-color-adjust: economy !important;
+                print-color-adjust: economy !important;
+                color-adjust: economy !important;
+            }
+            
+            /* Force all text to black */
+            body,
+            p,
+            h1, h2, h3, h4, h5, h6,
+            li,
+            td, th,
+            span,
+            div,
+            a,
+            .toc-title,
+            .part-title,
+            .part-title a,
+            .toc-item,
+            .toc-item a {
+                color: #000000 !important;
+                background-color: transparent !important;
+            }
+            
+            /* Force all backgrounds to white */
+            body,
+            .part-section {
+                background-color: #ffffff !important;
+                background: #ffffff !important;
+            }
+            
+            /* Remove gradients */
+            .toc-title::after,
+            .part-section {
+                background: none !important;
+                background-color: #ffffff !important;
+            }
+            
+            /* Part title borders in black */
+            .part-title {
+                border-bottom-color: #000000 !important;
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+            
+            /* Center "Reference Materials" when it has no link */
+            /* Note: :has() selector not supported in EPUB 2.0, using .reference-title class instead */
+            
+            .part-title a {
+                color: #000000 !important;
+                display: inline !important;
+                flex: 1 !important;
+            }
+            
+            .part-title span {
+                color: #000000 !important;
+                flex-shrink: 0 !important;
+                margin-left: auto !important;
+                text-align: right !important;
+            }
+            
+            /* Center "Reference Materials" in print */
+            .part-title.reference-title {
+                justify-content: center !important;
             }
             
             /* Body setup for 6x9 trade paperback */
@@ -197,7 +292,7 @@
                 line-height: 1.5;
                 font-size: 11pt !important;
                 overflow: visible !important;
-                max-width: none !important;
+                max-width: 100% !important;
                 width: 100% !important;
             }
             
@@ -435,86 +530,72 @@
     </style>
 </head>
 <body>
-    <div class="table-of-contents">
-        <h1 class="toc-title">Table of Contents</h1>
-        
-        <div class="toc-item">
-            <a href="introduction.html">Introduction</a>
-        </div>
-        
-        <div class="part-section">
-            <h2 class="part-title"><a href="part1.html">Part 1: Unmasking the Myth</a></h2>
-            
-            <div class="toc-item">
-                <a href="chapter1.html">Chapter 1: The Invention of Eternal Fire</a>
-            </div>
-            
-            <div class="toc-item">
-                <a href="chapter2.html">Chapter 2: Jesus vs. the Punishing God</a>
-            </div>
-            
-        </div>
-        
-        <div class="part-section">
-            <h2 class="part-title"><a href="part2.html">Part 2: How Fear Slipped Back In</a></h2>
-            
-            <div class="toc-item">
-                <a href="chapter3.html">Chapter 3: Paul and the Return of Fear</a>
-            </div>
-        </div>
-        
-        <div class="part-section">
-            <h2 class="part-title"><a href="part3.html">Part 3: Clearing Up The "Hell" Texts</a></h2>
-            
-            <div class="toc-item">
-                <a href="chapter4.html">Chapter 4: The Verses Everyone Can't Unsee - Proving the Parables</a>
-            </div>
-            
-            <div class="toc-item">
-                <a href="chapter5.html">Chapter 5: The Day the World Ended - AD 70 and the 'Coming' of Christ</a>
-            </div>
-        </div>
-        
-        <div class="part-section">
-            <h2 class="part-title"><a href="part4.html">Part 4: The Gospel Of Love</a></h2>
-            
-            <div class="toc-item">
-                <a href="chapter6.html">Chapter 6: The Father Who Never Stops Loving</a>
-            </div>
-            
-            <div class="toc-item">
-                <a href="chapter7.html">Chapter 7: Escaping the Fear Cycle</a>
-            </div>
-            
-            <div class="toc-item">
-                <a href="chapter8.html">Chapter 8: The Wounds We Inherit: How Hell Belief Damages Everything</a>
-            </div>
-        </div>
-        
-        <div class="toc-item">
-            <a href="conclusion.html">Conclusion: Love Wins. Always.</a>
-        </div>
-        
-        <div class="toc-item">
-            <a href="other-books.html">Books By Ansilo Boff</a>
-        </div>
-        
-        <div class="part-section">
-            <h2 class="part-title">Reference Materials</h2>
-            
-            <div class="toc-item">
-                <a href="appendix.html">Appendix: Glossary of Key Terms</a>
-            </div>
-            
-            <div class="toc-item">
-                <a href="bibliography.html">Bibliography</a>
-            </div>
-        </div>
-        
-        <div class="navigation-buttons">
-            <a href="dedication.html" class="nav-button">Previous: Dedication</a>
-            <a href="introduction.html" class="nav-button">Next: Introduction</a>
-        </div>
-    </div>
+<div class="table-of-contents">
+<h1 class="toc-title">Table of Contents</h1>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="introduction.html" style="flex:1 1 auto;">Introduction</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">4</span> 
+</div>
+<div class="part-section">
+<h2 class="part-title" style="overflow: auto; display:flex; justify-content:space-between; align-items:flex-start;"><a href="part1.html" style="flex:1 1 auto;">Part 1: Unmasking the Myth</a> </h2>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter1.html" style="flex:1 1 auto;">Chapter 1: The Invention of Eternal Fire</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">13</span> 
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter2.html" style="flex:1 1 auto;">Chapter 2: Jesus vs. the Punishing God</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">26</span> 
+</div>
+</div>
+<div class="part-section">
+<h2 class="part-title" style="overflow: auto; display:flex; justify-content:space-between; align-items:flex-start;"><a href="part2.html" style="flex:1 1 auto;">Part 2: How Fear Slipped Back In</a> </h2>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter3.html" style="flex:1 1 auto;">Chapter 3: Paul and the Return of Fear</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">40</span> 
+</div>
+</div>
+<div class="part-section">
+<h2 class="part-title" style="overflow: auto; display:flex; justify-content:space-between; align-items:flex-start;"><a href="part3.html" style="flex:1 1 auto;">Part 3: Clearing Up The "Hell" Texts</a> </h2>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter4.html" style="flex:1 1 auto;">Chapter 4: The Verses And Phrases Everyone Can't Unsee</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">56</span> 
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter5.html" style="flex:1 1 auto;">Chapter 5: The Day the World Ended : AD 70 and the 'Coming' of Christ</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">76</span> 
+</div>
+</div>
+<div class="part-section">
+<h2 class="part-title" style="overflow: auto; display:flex; justify-content:space-between; align-items:flex-start;"><a href="part4.html" style="flex:1 1 auto;">Part 4: The Gospel Of Love</a> </h2>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter6.html" style="flex:1 1 auto;">Chapter 6: The Father Who Never Stops Loving</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">103</span> 
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter7.html" style="flex:1 1 auto;">Chapter 7: Escaping the Fear Cycle</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">114</span> 
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="chapter8.html" style="flex:1 1 auto;">Chapter 8: The Wounds We Inherit: How Hell Belief Damages Everything</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">126</span> 
+</div>
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="conclusion.html" style="flex:1 1 auto;">Conclusion: Love Wins. Always.</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">138</span> 
+</div>
+<div class="part-section">
+<h2 class="part-title reference-title">Reference Materials</h2>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="appendix.html" style="flex:1 1 auto;">Appendix: Glossary of Key Terms</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">145</span> 
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="bibliography.html" style="flex:1 1 auto;">Bibliography</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">152</span> 
+</div>
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="other-books.html" style="flex:1 1 auto;">Books By Ansilo Boff</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">162</span> 
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="acknowledgments.html" style="flex:1 1 auto;">Acknowledgments</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">187</span> 
+</div>
+<div class="toc-item" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a href="author-bio.html" style="flex:1 1 auto;">Author Bio</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">188</span> 
+</div>
+<div class="navigation-buttons" style="display:flex;justify-content:space-between;align-items:baseline;">
+<a class="nav-button" href="dedication.html" style="flex:1 1 auto;">Previous: Dedication</a>
+<a class="nav-button" href="introduction.html" style="flex:1 1 auto;">Next: Introduction</a><span style="margin-left:1em; white-space:nowrap; padding-top:10px;">4</span> 
+</div>
+</div>
 </body>
 </html> 
